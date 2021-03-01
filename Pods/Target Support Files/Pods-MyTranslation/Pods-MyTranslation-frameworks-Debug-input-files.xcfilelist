@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-MyTranslation/Pods-MyTranslation-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IBMSwiftSDKCore/IBMSwiftSDKCore.framework
+${BUILT_PRODUCTS_DIR}/IBMWatsonLanguageTranslatorV3/LanguageTranslator.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

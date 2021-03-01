@@ -1,0 +1,1492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		161D8DE1CCC889D43E16305E8F6CF3B3 /* DocumentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958A2165E88FCBEF2051542A24AFBCB /* DocumentList.swift */; };
+		16243F482791D3093CFAF721A3291CC5 /* TranslationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36743884A9AE58EDD4CE7DD2DC2114B0 /* TranslationModels.swift */; };
+		18DDEC8005B616FFC0A7738DCEC48706 /* IBMSwiftSDKCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB2AD0D471444D0ED0C6EEB90CF0DE6 /* IBMSwiftSDKCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE326DB274464ED209BB85947FB55060 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A6A0FDA11133D4CADF01B537DCA21AE /* Pods-MyTranslationTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3ABF79A645C7E94EFDFF9B07B3EE4F /* Pods-MyTranslationTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20D3BF579BE4E401569C0FF1B94EAB97 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C9DF813AC1F4E8C2C4C23AEBFFCD1 /* Shared.swift */; };
+		2386B97E989DA4E11314081720FE75FC /* Pods-MyTranslationTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5331ECC5D0A63D9968D722DE6D75B64 /* Pods-MyTranslationTests-dummy.m */; };
+		242397FBBB47DE967E9647E6AA35FD02 /* IdentifiableLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723F2438798F4655FE400065C1549D1A /* IdentifiableLanguages.swift */; };
+		2AAD37619C70C3BAC535E8E96EFA0EE3 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFB101F9E46397CB071DD19E06A630F /* RestRequest.swift */; };
+		2BF6FBC0A64BF107C5D64C61F1397770 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355FB497783192C9A99D7DCA1CDA58E /* SwiftyJSON-dummy.m */; };
+		319A455AFE45D325E5154411BF1249C0 /* Pods-MyTranslation-MyTranslationUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CBA3C7D2E1B1D7BC2C459778F3CBA7 /* Pods-MyTranslation-MyTranslationUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A314CD826349B399087BA3DD39017CC /* Pods-MyTranslation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A29248C032DC060066143492FEF40 /* Pods-MyTranslation-dummy.m */; };
+		40D57B8CE1BA13874CBA86C0198D5AD2 /* InsecureConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95838FB2A1C4FA7BCE75A02A417DD88F /* InsecureConnection.swift */; };
+		43F59380D2E59AE63B276C63B0EA1EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */; };
+		4E45E4FBC5C59389FE63DD563A19DF8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */; };
+		59354C94A50B483675B4C9957DA0E761 /* CloudPakForDataAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB93C4B728811E4161D0B2B1D3D03 /* CloudPakForDataAuthenticator.swift */; };
+		5DCDAA40E45D6FC1CE591FD9E7D083C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */; };
+		5E23AF5BA33DF108D10C3F0C29912CA1 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6136B221C0502EE66E4661BC8C9E6F /* MultipartFormData.swift */; };
+		60297FEC5A4143956AF143C2DFA78FEF /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55AC3B9CD5EB42007BA6073575B74F /* Languages.swift */; };
+		610CA135D25BAD44E047A764D2C75608 /* TranslationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4D4C69BC1C44BC28AF1B64D81BF59 /* TranslationResult.swift */; };
+		616A7E7E891CED75F33BE9E6D24B248E /* TranslationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2ADE6F7AB6514C3D3DD63AD26DC07E /* TranslationModel.swift */; };
+		6463CF8A091A1004DA4C7D6D4C465050 /* IBMSwiftSDKCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E593E4A87C909F8A6E8486FE3550 /* IBMSwiftSDKCore-dummy.m */; };
+		677E9A4A32533635EECB959814EA0D57 /* IBMWatsonLanguageTranslatorV3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12593027BA8EF7EE66CFE9C99447E788 /* IBMWatsonLanguageTranslatorV3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AEF4C7E00EC43F5E59703137532C2C6 /* LanguageTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C153299F929E2C89B68CDAE6FB7BA0 /* LanguageTranslator.swift */; };
+		6FA1A1CCAC31B709EF1420192C3A2BE0 /* InsecureConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839046E98F76EE2C1CC3C3DD2D147CD /* InsecureConnection.swift */; };
+		743D96A10A58BA99CBB51782E9753128 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A764DFB236DCD0ACE9DC361BFCCF05F /* Translation.swift */; };
+		785C4BE567B07F4844634B5D0BFA82CA /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2CB8D8A090B99287542705BE13BD0 /* JWT.swift */; };
+		7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE9DB84E1DE2236839195017784F7 /* SwiftyJSON.swift */; };
+		80DF81F082D9C2AE5DA1E8F9FEE8DA80 /* RestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062E85B4C0ADA588C3A225678CEDEF96 /* RestResponse.swift */; };
+		86D168DEEA9F1B0483E5D24C40382A93 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC612FB2C94F08F45CA37A8C9DE289D /* Authentication.swift */; };
+		87C63B0411ADC349484FF1657BDA5879 /* IdentifiableLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC55E303438FE118E8123EDDE949337 /* IdentifiableLanguage.swift */; };
+		88B83D448C30DAAB622AA5B874C7B759 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */; };
+		891829B1B3A1FE3E3AEEB4517EFE6CA4 /* ConfigBasedAuthenticatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88509C15A22C7F0B51E5619ABD795CB5 /* ConfigBasedAuthenticatorFactory.swift */; };
+		8C19C43856075AF0D6A3A7D34DDE622E /* DocumentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5449E630D21076CDC09AE2268A441 /* DocumentStatus.swift */; };
+		9A5A4C89A39379E1A3EB09F39B2453E3 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B2D38BBB0BE95C924F244FA151B72 /* RestError.swift */; };
+		9DF81BBA19BB83EFCE4A135FC418073D /* IdentifiedLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4419F881DBC48EE359190F61E1128B4F /* IdentifiedLanguage.swift */; };
+		AA9560C73201DC9B6F2D888C54935890 /* IAMAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FE64A1BBD8E9540E593049F9FBC7A /* IAMAuthenticator.swift */; };
+		B787B5FCD2787858439AF870C5E0B711 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB1B3E93F14BFFB3A1FE7D3CC8D32F /* CodableExtensions.swift */; };
+		BB912B1DCE7829C58D5F37ECB9FAC0B2 /* IBMSwiftSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46ACAE2D7BB5CFD1E5306E8237994D96 /* IBMSwiftSDKCore.framework */; };
+		C0B023BF1B280B8B23D088DFEACD3294 /* DeleteModelResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48468A73E8F9789CEDF0A88AAB164AEB /* DeleteModelResult.swift */; };
+		C106600CD1F7268999717B761B791BD7 /* TranslateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA872697D50594D4AA2F72EC56342C /* TranslateRequest.swift */; };
+		C297AC9431379391C114794AFD4F9778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */; };
+		D75AE0BE3046E4AE278FF5A098B5769A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8C1AD964891F0EE847CAF291AE5E7 /* JSON.swift */; };
+		E8F0F9F457B95B11C3CF7A0B8C91FD0C /* Pods-MyTranslation-MyTranslationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D5D64FC9D52AD3D287F663008570E8 /* Pods-MyTranslation-MyTranslationUITests-dummy.m */; };
+		EA997FE5653158E7D4885EE760044848 /* IBMWatsonLanguageTranslatorV3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C6381B4F5AF9D32CD3A3718FC7B4 /* IBMWatsonLanguageTranslatorV3-dummy.m */; };
+		F21501282902C091C3647C95AEE24BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */; };
+		FA925312660FA9C00C4E441A49A8BDD7 /* IdentifiedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945F9D1B530B8C3C45CDFF6F1F71562 /* IdentifiedLanguages.swift */; };
+		FB914152DD4032ABDA99881EC745EAC4 /* Pods-MyTranslation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D0A600FB26C296A4AED8FFCFF275C4 /* Pods-MyTranslation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDFFB46B16962698755E53062E1F40FA /* CredentialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8141B1618497A7D9C78C3D9067C1E6 /* CredentialUtils.swift */; };
+		FE092ACB25BC3B5EF2F5086F6639692D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F708063C07412C0F2EA0754508C8BD8 /* Language.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0728D295D3DB1142D6199AA39A5D7E5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C212BBFAF6FC8270BF5BEF8057998E30;
+			remoteInfo = IBMSwiftSDKCore;
+		};
+		26345D090384229169E4DD448C740279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
+		271BA8C104F802C6EE829D3F4E4FE5E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B724283F9BE15AC7375A6203787C69;
+			remoteInfo = IBMWatsonLanguageTranslatorV3;
+		};
+		3CB9B3D43488DFF53C15827FF441BE69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C212BBFAF6FC8270BF5BEF8057998E30;
+			remoteInfo = IBMSwiftSDKCore;
+		};
+		41A8F7A6DF41BCCB13CFA7FFB9E5F145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
+		509507019363017C071DAE199B0C1B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C212BBFAF6FC8270BF5BEF8057998E30;
+			remoteInfo = IBMSwiftSDKCore;
+		};
+		8C4CE5037F5BF4E59F376EA02CE5D841 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 790D9A3C79EC640B4EB9A22A1D94C74E;
+			remoteInfo = "Pods-MyTranslation";
+		};
+		B9F65F22EA4C9B571499833C4E2311C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B724283F9BE15AC7375A6203787C69;
+			remoteInfo = IBMWatsonLanguageTranslatorV3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03FE89786373D34E1C2F0C1C4C29C6C5 /* Pods-MyTranslationTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTranslationTests-Info.plist"; sourceTree = "<group>"; };
+		062E85B4C0ADA588C3A225678CEDEF96 /* RestResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestResponse.swift; path = Sources/IBMSwiftSDKCore/RestResponse.swift; sourceTree = "<group>"; };
+		0A2482FA6C26550C41A66E68E5BED1C6 /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
+		0C2ADE6F7AB6514C3D3DD63AD26DC07E /* TranslationModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TranslationModel.swift; path = Source/LanguageTranslatorV3/Models/TranslationModel.swift; sourceTree = "<group>"; };
+		0E32B78B33998A8B35C656268E445408 /* Pods-MyTranslationTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTranslationTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		12593027BA8EF7EE66CFE9C99447E788 /* IBMWatsonLanguageTranslatorV3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMWatsonLanguageTranslatorV3-umbrella.h"; sourceTree = "<group>"; };
+		13D4EABBA66BB5433A02DC91219D12E6 /* Pods_MyTranslation_MyTranslationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyTranslation_MyTranslationUITests.framework; path = "Pods-MyTranslation-MyTranslationUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1958A2165E88FCBEF2051542A24AFBCB /* DocumentList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentList.swift; path = Source/LanguageTranslatorV3/Models/DocumentList.swift; sourceTree = "<group>"; };
+		1D624D8E7994CF3094B1CC05339630FF /* IBMSwiftSDKCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IBMSwiftSDKCore.modulemap; sourceTree = "<group>"; };
+		1E2A29248C032DC060066143492FEF40 /* Pods-MyTranslation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyTranslation-dummy.m"; sourceTree = "<group>"; };
+		22CBA3C7D2E1B1D7BC2C459778F3CBA7 /* Pods-MyTranslation-MyTranslationUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyTranslation-MyTranslationUITests-umbrella.h"; sourceTree = "<group>"; };
+		27B14B89E72825832EACFCFBE59958D8 /* Pods-MyTranslationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTranslationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29C153299F929E2C89B68CDAE6FB7BA0 /* LanguageTranslator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageTranslator.swift; path = Source/LanguageTranslatorV3/LanguageTranslator.swift; sourceTree = "<group>"; };
+		2B3ABF79A645C7E94EFDFF9B07B3EE4F /* Pods-MyTranslationTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyTranslationTests-umbrella.h"; sourceTree = "<group>"; };
+		34A767D0A28155655B61855D9F64B63C /* IBMWatsonLanguageTranslatorV3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBMWatsonLanguageTranslatorV3.debug.xcconfig; sourceTree = "<group>"; };
+		36743884A9AE58EDD4CE7DD2DC2114B0 /* TranslationModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TranslationModels.swift; path = Source/LanguageTranslatorV3/Models/TranslationModels.swift; sourceTree = "<group>"; };
+		36AC46977ABA99D6F0527DE8D00A1942 /* Pods_MyTranslationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyTranslationTests.framework; path = "Pods-MyTranslationTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AADC350041529B2EAAE764BB60CBB7A /* Pods-MyTranslation-MyTranslationUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTranslation-MyTranslationUITests-Info.plist"; sourceTree = "<group>"; };
+		43B8C1AD964891F0EE847CAF291AE5E7 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/IBMSwiftSDKCore/JSON.swift; sourceTree = "<group>"; };
+		4419F881DBC48EE359190F61E1128B4F /* IdentifiedLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentifiedLanguage.swift; path = Source/LanguageTranslatorV3/Models/IdentifiedLanguage.swift; sourceTree = "<group>"; };
+		449A92CFF870E75A88C6D2AE21773010 /* Pods-MyTranslation-MyTranslationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46ACAE2D7BB5CFD1E5306E8237994D96 /* IBMSwiftSDKCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IBMSwiftSDKCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48468A73E8F9789CEDF0A88AAB164AEB /* DeleteModelResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteModelResult.swift; path = Source/LanguageTranslatorV3/Models/DeleteModelResult.swift; sourceTree = "<group>"; };
+		4A04545B58DD8C4E57E7E61BB3FE9CFA /* Pods-MyTranslation-MyTranslationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyTranslation-MyTranslationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4A78E1769BBA7F20027532EF1CCFDF67 /* IBMWatsonLanguageTranslatorV3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBMWatsonLanguageTranslatorV3.release.xcconfig; sourceTree = "<group>"; };
+		544787BD3776C9FE92631DD809716B77 /* Pods-MyTranslationTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyTranslationTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		57FA872697D50594D4AA2F72EC56342C /* TranslateRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TranslateRequest.swift; path = Source/LanguageTranslatorV3/Models/TranslateRequest.swift; sourceTree = "<group>"; };
+		5839046E98F76EE2C1CC3C3DD2D147CD /* InsecureConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsecureConnection.swift; path = Sources/IBMSwiftSDKCore/Authentication/InsecureConnection.swift; sourceTree = "<group>"; };
+		59D5D64FC9D52AD3D287F663008570E8 /* Pods-MyTranslation-MyTranslationUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyTranslation-MyTranslationUITests-dummy.m"; sourceTree = "<group>"; };
+		5A6136B221C0502EE66E4661BC8C9E6F /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Sources/IBMSwiftSDKCore/MultipartFormData.swift; sourceTree = "<group>"; };
+		5D43A807A5B50D39B758D47710468A4E /* IBMSwiftSDKCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBMSwiftSDKCore.debug.xcconfig; sourceTree = "<group>"; };
+		5F3C5D8F085D911DDD9FE4304EA4978E /* Pods-MyTranslationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTranslationTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F708063C07412C0F2EA0754508C8BD8 /* Language.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Language.swift; path = Source/LanguageTranslatorV3/Models/Language.swift; sourceTree = "<group>"; };
+		623B2D38BBB0BE95C924F244FA151B72 /* RestError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestError.swift; path = Sources/IBMSwiftSDKCore/RestError.swift; sourceTree = "<group>"; };
+		62B7AED906341A97EA7FDCB4F3687A54 /* Pods-MyTranslation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTranslation.release.xcconfig"; sourceTree = "<group>"; };
+		63997066DCD29229D3E876FAADB9E449 /* Pods-MyTranslationTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyTranslationTests.modulemap"; sourceTree = "<group>"; };
+		6888F1DB87D62F912C1B201E3A2A91F9 /* Pods-MyTranslation-MyTranslationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTranslation-MyTranslationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A764DFB236DCD0ACE9DC361BFCCF05F /* Translation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Translation.swift; path = Source/LanguageTranslatorV3/Models/Translation.swift; sourceTree = "<group>"; };
+		6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70769CF0B8E09A301CA85C06F43DD500 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		723F2438798F4655FE400065C1549D1A /* IdentifiableLanguages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentifiableLanguages.swift; path = Source/LanguageTranslatorV3/Models/IdentifiableLanguages.swift; sourceTree = "<group>"; };
+		7355FB497783192C9A99D7DCA1CDA58E /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		77FB1B3E93F14BFFB3A1FE7D3CC8D32F /* CodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = Sources/IBMSwiftSDKCore/CodableExtensions.swift; sourceTree = "<group>"; };
+		7F5C73A9B095AD1C041DCD2B6F82333E /* Pods-MyTranslation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyTranslation-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8661EE948667A0CA165B2E70C03ED81A /* Pods-MyTranslation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTranslation-acknowledgements.plist"; sourceTree = "<group>"; };
+		88509C15A22C7F0B51E5619ABD795CB5 /* ConfigBasedAuthenticatorFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigBasedAuthenticatorFactory.swift; path = Sources/IBMSwiftSDKCore/Authentication/ConfigBasedAuthenticatorFactory.swift; sourceTree = "<group>"; };
+		8C8141B1618497A7D9C78C3D9067C1E6 /* CredentialUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CredentialUtils.swift; path = Sources/IBMSwiftSDKCore/CredentialUtils.swift; sourceTree = "<group>"; };
+		8CDDB93C4B728811E4161D0B2B1D3D03 /* CloudPakForDataAuthenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloudPakForDataAuthenticator.swift; path = Sources/IBMSwiftSDKCore/Authentication/CloudPakForDataAuthenticator.swift; sourceTree = "<group>"; };
+		8D75CE21728209ECA50D4F2D1ED7AD82 /* IBMWatsonLanguageTranslatorV3-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IBMWatsonLanguageTranslatorV3-Info.plist"; sourceTree = "<group>"; };
+		8DD2CB8D8A090B99287542705BE13BD0 /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Sources/IBMSwiftSDKCore/Authentication/JWT.swift; sourceTree = "<group>"; };
+		8EC55E303438FE118E8123EDDE949337 /* IdentifiableLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentifiableLanguage.swift; path = Source/LanguageTranslatorV3/Models/IdentifiableLanguage.swift; sourceTree = "<group>"; };
+		91ADA8F7925064017DC9E5AC4E865D21 /* IBMSwiftSDKCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IBMSwiftSDKCore-Info.plist"; sourceTree = "<group>"; };
+		95838FB2A1C4FA7BCE75A02A417DD88F /* InsecureConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsecureConnection.swift; path = Source/SupportingFiles/InsecureConnection.swift; sourceTree = "<group>"; };
+		98B24C170C86C6494CFB013FFBEE222C /* Pods_MyTranslation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyTranslation.framework; path = "Pods-MyTranslation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9945F9D1B530B8C3C45CDFF6F1F71562 /* IdentifiedLanguages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentifiedLanguages.swift; path = Source/LanguageTranslatorV3/Models/IdentifiedLanguages.swift; sourceTree = "<group>"; };
+		997848EE468B14F17DC2D7EAFAA21F7A /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
+		9AA1C6381B4F5AF9D32CD3A3718FC7B4 /* IBMWatsonLanguageTranslatorV3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBMWatsonLanguageTranslatorV3-dummy.m"; sourceTree = "<group>"; };
+		9AD843B2DCD20919CA65564899951A11 /* Pods-MyTranslation-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyTranslation-frameworks.sh"; sourceTree = "<group>"; };
+		9C9D2A45F8821C8FFFDB00C22F23DE20 /* Pods-MyTranslation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTranslation-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E690AD846729EFFBAF6519046672DBE /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
+		A1626E2F5FC5BECEDE209E21C3B532D8 /* Pods-MyTranslation-MyTranslationUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyTranslation-MyTranslationUITests.modulemap"; sourceTree = "<group>"; };
+		A4B6DED36189A42C0BFD173FCD36862A /* IBMWatsonLanguageTranslatorV3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IBMWatsonLanguageTranslatorV3.modulemap; sourceTree = "<group>"; };
+		AABEAA2F437D11B7E1084DBB3F6725D4 /* Pods-MyTranslation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyTranslation.modulemap"; sourceTree = "<group>"; };
+		B1C5449E630D21076CDC09AE2268A441 /* DocumentStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentStatus.swift; path = Source/LanguageTranslatorV3/Models/DocumentStatus.swift; sourceTree = "<group>"; };
+		BAFB101F9E46397CB071DD19E06A630F /* RestRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestRequest.swift; path = Sources/IBMSwiftSDKCore/RestRequest.swift; sourceTree = "<group>"; };
+		BDB2AD0D471444D0ED0C6EEB90CF0DE6 /* IBMSwiftSDKCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMSwiftSDKCore-umbrella.h"; sourceTree = "<group>"; };
+		C8F0E593E4A87C909F8A6E8486FE3550 /* IBMSwiftSDKCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBMSwiftSDKCore-dummy.m"; sourceTree = "<group>"; };
+		CB57503412E3FA654FB3C986FA6781F3 /* Pods-MyTranslation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTranslation.debug.xcconfig"; sourceTree = "<group>"; };
+		CC047F236BF7BACC1E327EED52229CFF /* Pods-MyTranslation-MyTranslationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTranslation-MyTranslationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CCCA919791FA225B37F607748AEABFC0 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		CE55AC3B9CD5EB42007BA6073575B74F /* Languages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Languages.swift; path = Source/LanguageTranslatorV3/Models/Languages.swift; sourceTree = "<group>"; };
+		D5331ECC5D0A63D9968D722DE6D75B64 /* Pods-MyTranslationTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyTranslationTests-dummy.m"; sourceTree = "<group>"; };
+		D7BC3B6AB1E4137B03F61EEDDCE61162 /* IBMSwiftSDKCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IBMSwiftSDKCore.framework; path = IBMSwiftSDKCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2FE64A1BBD8E9540E593049F9FBC7A /* IAMAuthenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAMAuthenticator.swift; path = Sources/IBMSwiftSDKCore/Authentication/IAMAuthenticator.swift; sourceTree = "<group>"; };
+		DE326DB274464ED209BB85947FB55060 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E297E22BA15A79289682B08C7F58E116 /* IBMWatsonLanguageTranslatorV3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMWatsonLanguageTranslatorV3-prefix.pch"; sourceTree = "<group>"; };
+		E6D0A600FB26C296A4AED8FFCFF275C4 /* Pods-MyTranslation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyTranslation-umbrella.h"; sourceTree = "<group>"; };
+		ECC4D4C69BC1C44BC28AF1B64D81BF59 /* TranslationResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TranslationResult.swift; path = Source/LanguageTranslatorV3/Models/TranslationResult.swift; sourceTree = "<group>"; };
+		EFC612FB2C94F08F45CA37A8C9DE289D /* Authentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = Sources/IBMSwiftSDKCore/Authentication/Authentication.swift; sourceTree = "<group>"; };
+		F2F10BF0766CD6B8304FED358C7C00A1 /* IBMSwiftSDKCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBMSwiftSDKCore.release.xcconfig; sourceTree = "<group>"; };
+		F55C9DF813AC1F4E8C2C4C23AEBFFCD1 /* Shared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = Source/SupportingFiles/Shared.swift; sourceTree = "<group>"; };
+		F8CE70F733DD60FB1A04DD800B646333 /* IBMSwiftSDKCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMSwiftSDKCore-prefix.pch"; sourceTree = "<group>"; };
+		FA4CD253F8AFFDA1AECB557B3A947BF0 /* LanguageTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LanguageTranslator.framework; path = IBMWatsonLanguageTranslatorV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE263375DEA5AB49E373EB23C035C00 /* Pods-MyTranslation-MyTranslationUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyTranslation-MyTranslationUITests-frameworks.sh"; sourceTree = "<group>"; };
+		FF1DE9DB84E1DE2236839195017784F7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09614B97EA0AA2EBD967013B0EF36835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21501282902C091C3647C95AEE24BDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AD8941C01722CD31C8F52365C1BEA9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F59380D2E59AE63B276C63B0EA1EDD /* Foundation.framework in Frameworks */,
+				BB912B1DCE7829C58D5F37ECB9FAC0B2 /* IBMSwiftSDKCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7943CBF7358C9F4B3750BA8A8414293D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DCDAA40E45D6FC1CE591FD9E7D083C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6EB0553F1D5E3C68FED1A4124F6D237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B83D448C30DAAB622AA5B874C7B759 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9C5A8DAF4334B670E91B2EC08DBE2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C297AC9431379391C114794AFD4F9778 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B02BC3EDD97C4B5C693165C5F2F86DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E45E4FBC5C59389FE63DD563A19DF8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0341EBF569A044E7A115AD5C5AD19D7F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F59BED89A76ACA6951C469665D0D7A07 /* Pods-MyTranslation */,
+				AC172D898015323A9476ACF0E413BB8D /* Pods-MyTranslation-MyTranslationUITests */,
+				84612B0387FACDAB22CB1B5E9D42D318 /* Pods-MyTranslationTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3881280D3B044FF033BC5D486CAC9F41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF19BAD73C1F8B672B41D9C5CDC1CC45 /* IBMSwiftSDKCore */,
+				8A77725575AD092846CE07FFB94E0C94 /* IBMWatsonLanguageTranslatorV3 */,
+				5B2544E5355EB9FC2443D50D54785C13 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4BDE46936B8ED7AF09FF89CBB7EF2E0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46ACAE2D7BB5CFD1E5306E8237994D96 /* IBMSwiftSDKCore.framework */,
+				4D40D2CB59269FA6AF2B68A91551BAA6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D40D2CB59269FA6AF2B68A91551BAA6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6B31B55948327FCE778860490F5EAC72 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5B2544E5355EB9FC2443D50D54785C13 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				FF1DE9DB84E1DE2236839195017784F7 /* SwiftyJSON.swift */,
+				D86E606BFB1AFF6C8FEC5FB4921AF5FB /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		84612B0387FACDAB22CB1B5E9D42D318 /* Pods-MyTranslationTests */ = {
+			isa = PBXGroup;
+			children = (
+				63997066DCD29229D3E876FAADB9E449 /* Pods-MyTranslationTests.modulemap */,
+				544787BD3776C9FE92631DD809716B77 /* Pods-MyTranslationTests-acknowledgements.markdown */,
+				0E32B78B33998A8B35C656268E445408 /* Pods-MyTranslationTests-acknowledgements.plist */,
+				D5331ECC5D0A63D9968D722DE6D75B64 /* Pods-MyTranslationTests-dummy.m */,
+				03FE89786373D34E1C2F0C1C4C29C6C5 /* Pods-MyTranslationTests-Info.plist */,
+				2B3ABF79A645C7E94EFDFF9B07B3EE4F /* Pods-MyTranslationTests-umbrella.h */,
+				27B14B89E72825832EACFCFBE59958D8 /* Pods-MyTranslationTests.debug.xcconfig */,
+				5F3C5D8F085D911DDD9FE4304EA4978E /* Pods-MyTranslationTests.release.xcconfig */,
+			);
+			name = "Pods-MyTranslationTests";
+			path = "Target Support Files/Pods-MyTranslationTests";
+			sourceTree = "<group>";
+		};
+		8581D845C7D5B9AF61DA025705AEC7D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4B6DED36189A42C0BFD173FCD36862A /* IBMWatsonLanguageTranslatorV3.modulemap */,
+				9AA1C6381B4F5AF9D32CD3A3718FC7B4 /* IBMWatsonLanguageTranslatorV3-dummy.m */,
+				8D75CE21728209ECA50D4F2D1ED7AD82 /* IBMWatsonLanguageTranslatorV3-Info.plist */,
+				E297E22BA15A79289682B08C7F58E116 /* IBMWatsonLanguageTranslatorV3-prefix.pch */,
+				12593027BA8EF7EE66CFE9C99447E788 /* IBMWatsonLanguageTranslatorV3-umbrella.h */,
+				34A767D0A28155655B61855D9F64B63C /* IBMWatsonLanguageTranslatorV3.debug.xcconfig */,
+				4A78E1769BBA7F20027532EF1CCFDF67 /* IBMWatsonLanguageTranslatorV3.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IBMWatsonLanguageTranslatorV3";
+			sourceTree = "<group>";
+		};
+		8A77725575AD092846CE07FFB94E0C94 /* IBMWatsonLanguageTranslatorV3 */ = {
+			isa = PBXGroup;
+			children = (
+				48468A73E8F9789CEDF0A88AAB164AEB /* DeleteModelResult.swift */,
+				1958A2165E88FCBEF2051542A24AFBCB /* DocumentList.swift */,
+				B1C5449E630D21076CDC09AE2268A441 /* DocumentStatus.swift */,
+				8EC55E303438FE118E8123EDDE949337 /* IdentifiableLanguage.swift */,
+				723F2438798F4655FE400065C1549D1A /* IdentifiableLanguages.swift */,
+				4419F881DBC48EE359190F61E1128B4F /* IdentifiedLanguage.swift */,
+				9945F9D1B530B8C3C45CDFF6F1F71562 /* IdentifiedLanguages.swift */,
+				95838FB2A1C4FA7BCE75A02A417DD88F /* InsecureConnection.swift */,
+				5F708063C07412C0F2EA0754508C8BD8 /* Language.swift */,
+				CE55AC3B9CD5EB42007BA6073575B74F /* Languages.swift */,
+				29C153299F929E2C89B68CDAE6FB7BA0 /* LanguageTranslator.swift */,
+				F55C9DF813AC1F4E8C2C4C23AEBFFCD1 /* Shared.swift */,
+				57FA872697D50594D4AA2F72EC56342C /* TranslateRequest.swift */,
+				6A764DFB236DCD0ACE9DC361BFCCF05F /* Translation.swift */,
+				0C2ADE6F7AB6514C3D3DD63AD26DC07E /* TranslationModel.swift */,
+				36743884A9AE58EDD4CE7DD2DC2114B0 /* TranslationModels.swift */,
+				ECC4D4C69BC1C44BC28AF1B64D81BF59 /* TranslationResult.swift */,
+				8581D845C7D5B9AF61DA025705AEC7D9 /* Support Files */,
+			);
+			name = IBMWatsonLanguageTranslatorV3;
+			path = IBMWatsonLanguageTranslatorV3;
+			sourceTree = "<group>";
+		};
+		9BEF078996837271CCEB9850B639F8BF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D624D8E7994CF3094B1CC05339630FF /* IBMSwiftSDKCore.modulemap */,
+				C8F0E593E4A87C909F8A6E8486FE3550 /* IBMSwiftSDKCore-dummy.m */,
+				91ADA8F7925064017DC9E5AC4E865D21 /* IBMSwiftSDKCore-Info.plist */,
+				F8CE70F733DD60FB1A04DD800B646333 /* IBMSwiftSDKCore-prefix.pch */,
+				BDB2AD0D471444D0ED0C6EEB90CF0DE6 /* IBMSwiftSDKCore-umbrella.h */,
+				5D43A807A5B50D39B758D47710468A4E /* IBMSwiftSDKCore.debug.xcconfig */,
+				F2F10BF0766CD6B8304FED358C7C00A1 /* IBMSwiftSDKCore.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IBMSwiftSDKCore";
+			sourceTree = "<group>";
+		};
+		AC172D898015323A9476ACF0E413BB8D /* Pods-MyTranslation-MyTranslationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1626E2F5FC5BECEDE209E21C3B532D8 /* Pods-MyTranslation-MyTranslationUITests.modulemap */,
+				4A04545B58DD8C4E57E7E61BB3FE9CFA /* Pods-MyTranslation-MyTranslationUITests-acknowledgements.markdown */,
+				6888F1DB87D62F912C1B201E3A2A91F9 /* Pods-MyTranslation-MyTranslationUITests-acknowledgements.plist */,
+				59D5D64FC9D52AD3D287F663008570E8 /* Pods-MyTranslation-MyTranslationUITests-dummy.m */,
+				FAE263375DEA5AB49E373EB23C035C00 /* Pods-MyTranslation-MyTranslationUITests-frameworks.sh */,
+				3AADC350041529B2EAAE764BB60CBB7A /* Pods-MyTranslation-MyTranslationUITests-Info.plist */,
+				22CBA3C7D2E1B1D7BC2C459778F3CBA7 /* Pods-MyTranslation-MyTranslationUITests-umbrella.h */,
+				449A92CFF870E75A88C6D2AE21773010 /* Pods-MyTranslation-MyTranslationUITests.debug.xcconfig */,
+				CC047F236BF7BACC1E327EED52229CFF /* Pods-MyTranslation-MyTranslationUITests.release.xcconfig */,
+			);
+			name = "Pods-MyTranslation-MyTranslationUITests";
+			path = "Target Support Files/Pods-MyTranslation-MyTranslationUITests";
+			sourceTree = "<group>";
+		};
+		AF19BAD73C1F8B672B41D9C5CDC1CC45 /* IBMSwiftSDKCore */ = {
+			isa = PBXGroup;
+			children = (
+				EFC612FB2C94F08F45CA37A8C9DE289D /* Authentication.swift */,
+				8CDDB93C4B728811E4161D0B2B1D3D03 /* CloudPakForDataAuthenticator.swift */,
+				77FB1B3E93F14BFFB3A1FE7D3CC8D32F /* CodableExtensions.swift */,
+				88509C15A22C7F0B51E5619ABD795CB5 /* ConfigBasedAuthenticatorFactory.swift */,
+				8C8141B1618497A7D9C78C3D9067C1E6 /* CredentialUtils.swift */,
+				DD2FE64A1BBD8E9540E593049F9FBC7A /* IAMAuthenticator.swift */,
+				5839046E98F76EE2C1CC3C3DD2D147CD /* InsecureConnection.swift */,
+				43B8C1AD964891F0EE847CAF291AE5E7 /* JSON.swift */,
+				8DD2CB8D8A090B99287542705BE13BD0 /* JWT.swift */,
+				5A6136B221C0502EE66E4661BC8C9E6F /* MultipartFormData.swift */,
+				623B2D38BBB0BE95C924F244FA151B72 /* RestError.swift */,
+				BAFB101F9E46397CB071DD19E06A630F /* RestRequest.swift */,
+				062E85B4C0ADA588C3A225678CEDEF96 /* RestResponse.swift */,
+				9BEF078996837271CCEB9850B639F8BF /* Support Files */,
+			);
+			name = IBMSwiftSDKCore;
+			path = IBMSwiftSDKCore;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				4BDE46936B8ED7AF09FF89CBB7EF2E0A /* Frameworks */,
+				3881280D3B044FF033BC5D486CAC9F41 /* Pods */,
+				EDD18DBBF8959C7CD83F23E1A60167D6 /* Products */,
+				0341EBF569A044E7A115AD5C5AD19D7F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D86E606BFB1AFF6C8FEC5FB4921AF5FB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70769CF0B8E09A301CA85C06F43DD500 /* SwiftyJSON.modulemap */,
+				7355FB497783192C9A99D7DCA1CDA58E /* SwiftyJSON-dummy.m */,
+				0A2482FA6C26550C41A66E68E5BED1C6 /* SwiftyJSON-Info.plist */,
+				CCCA919791FA225B37F607748AEABFC0 /* SwiftyJSON-prefix.pch */,
+				DE326DB274464ED209BB85947FB55060 /* SwiftyJSON-umbrella.h */,
+				997848EE468B14F17DC2D7EAFAA21F7A /* SwiftyJSON.debug.xcconfig */,
+				9E690AD846729EFFBAF6519046672DBE /* SwiftyJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		EDD18DBBF8959C7CD83F23E1A60167D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC3B6AB1E4137B03F61EEDDCE61162 /* IBMSwiftSDKCore.framework */,
+				FA4CD253F8AFFDA1AECB557B3A947BF0 /* LanguageTranslator.framework */,
+				98B24C170C86C6494CFB013FFBEE222C /* Pods_MyTranslation.framework */,
+				13D4EABBA66BB5433A02DC91219D12E6 /* Pods_MyTranslation_MyTranslationUITests.framework */,
+				36AC46977ABA99D6F0527DE8D00A1942 /* Pods_MyTranslationTests.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F59BED89A76ACA6951C469665D0D7A07 /* Pods-MyTranslation */ = {
+			isa = PBXGroup;
+			children = (
+				AABEAA2F437D11B7E1084DBB3F6725D4 /* Pods-MyTranslation.modulemap */,
+				7F5C73A9B095AD1C041DCD2B6F82333E /* Pods-MyTranslation-acknowledgements.markdown */,
+				8661EE948667A0CA165B2E70C03ED81A /* Pods-MyTranslation-acknowledgements.plist */,
+				1E2A29248C032DC060066143492FEF40 /* Pods-MyTranslation-dummy.m */,
+				9AD843B2DCD20919CA65564899951A11 /* Pods-MyTranslation-frameworks.sh */,
+				9C9D2A45F8821C8FFFDB00C22F23DE20 /* Pods-MyTranslation-Info.plist */,
+				E6D0A600FB26C296A4AED8FFCFF275C4 /* Pods-MyTranslation-umbrella.h */,
+				CB57503412E3FA654FB3C986FA6781F3 /* Pods-MyTranslation.debug.xcconfig */,
+				62B7AED906341A97EA7FDCB4F3687A54 /* Pods-MyTranslation.release.xcconfig */,
+			);
+			name = "Pods-MyTranslation";
+			path = "Target Support Files/Pods-MyTranslation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F7FFA05F59CC8CF51AF629877A188A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DDEC8005B616FFC0A7738DCEC48706 /* IBMSwiftSDKCore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6673F77F7D4F270812AF578E73C702CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB914152DD4032ABDA99881EC745EAC4 /* Pods-MyTranslation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FDD1AB9D3E853C0CAC4A5CA071D9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6A0FDA11133D4CADF01B537DCA21AE /* Pods-MyTranslationTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B78718977326EF724C2992EE1AA4A0A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319A455AFE45D325E5154411BF1249C0 /* Pods-MyTranslation-MyTranslationUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59C7BCA394EDD71F16223ADAEC6CA14 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677E9A4A32533635EECB959814EA0D57 /* IBMWatsonLanguageTranslatorV3-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74A119716A8A1C30988C8E091ABEEE63 /* Pods-MyTranslationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8A15A82CB304E69B514657A238C290 /* Build configuration list for PBXNativeTarget "Pods-MyTranslationTests" */;
+			buildPhases = (
+				844FDD1AB9D3E853C0CAC4A5CA071D9F /* Headers */,
+				6911D07301499FB8548E1F9954C5EBCA /* Sources */,
+				A6EB0553F1D5E3C68FED1A4124F6D237 /* Frameworks */,
+				A2E5FCF89A50876CD2A2CD2508CE12CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B23A3470BBEC5FB3FC5EE8056502F9C /* PBXTargetDependency */,
+			);
+			name = "Pods-MyTranslationTests";
+			productName = "Pods-MyTranslationTests";
+			productReference = 36AC46977ABA99D6F0527DE8D00A1942 /* Pods_MyTranslationTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		790D9A3C79EC640B4EB9A22A1D94C74E /* Pods-MyTranslation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6479E0FC4536F509F80B2BB68B6734A3 /* Build configuration list for PBXNativeTarget "Pods-MyTranslation" */;
+			buildPhases = (
+				6673F77F7D4F270812AF578E73C702CA /* Headers */,
+				8AA7A5D68DA25CDDB62D19BBB1C46FDA /* Sources */,
+				09614B97EA0AA2EBD967013B0EF36835 /* Frameworks */,
+				078F265673789AAF4CACA425B05E06EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97425A19079105264E66C2E03D7F365B /* PBXTargetDependency */,
+				3671FE05D6CCF52FF05ACD303A924C12 /* PBXTargetDependency */,
+				56B0A52EF8E84FB59AE11C8C8DA3F1CE /* PBXTargetDependency */,
+			);
+			name = "Pods-MyTranslation";
+			productName = "Pods-MyTranslation";
+			productReference = 98B24C170C86C6494CFB013FFBEE222C /* Pods_MyTranslation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2B724283F9BE15AC7375A6203787C69 /* IBMWatsonLanguageTranslatorV3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23DEE66E1CD2ABE0AEDBAC054DB71B34 /* Build configuration list for PBXNativeTarget "IBMWatsonLanguageTranslatorV3" */;
+			buildPhases = (
+				E59C7BCA394EDD71F16223ADAEC6CA14 /* Headers */,
+				207D436BBBF03DD8A413953BAE4DDE28 /* Sources */,
+				4AD8941C01722CD31C8F52365C1BEA9C /* Frameworks */,
+				5DFBDD7114B18598AC1BA59DB016BBFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20561B1522CF7E85566A7A2B08AAD999 /* PBXTargetDependency */,
+			);
+			name = IBMWatsonLanguageTranslatorV3;
+			productName = IBMWatsonLanguageTranslatorV3;
+			productReference = FA4CD253F8AFFDA1AECB557B3A947BF0 /* LanguageTranslator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C212BBFAF6FC8270BF5BEF8057998E30 /* IBMSwiftSDKCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8843CC30CDE47856297265C0321AACBF /* Build configuration list for PBXNativeTarget "IBMSwiftSDKCore" */;
+			buildPhases = (
+				5F7FFA05F59CC8CF51AF629877A188A0 /* Headers */,
+				41794AAA12C46CD1E820B389596A05EE /* Sources */,
+				B02BC3EDD97C4B5C693165C5F2F86DB2 /* Frameworks */,
+				366DBA4C8EB69D4EC0F2468E071776F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IBMSwiftSDKCore;
+			productName = IBMSwiftSDKCore;
+			productReference = D7BC3B6AB1E4137B03F61EEDDCE61162 /* IBMSwiftSDKCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB38172B61AEA7130ED06E5A259D0413 /* Pods-MyTranslation-MyTranslationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2255FE344C88784A97C64F447BF17CD /* Build configuration list for PBXNativeTarget "Pods-MyTranslation-MyTranslationUITests" */;
+			buildPhases = (
+				B78718977326EF724C2992EE1AA4A0A6 /* Headers */,
+				25A4A6739C25075EA765C2F083ED67C0 /* Sources */,
+				7943CBF7358C9F4B3750BA8A8414293D /* Frameworks */,
+				E9F5D7B54179478836FA7630BAD82959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1886A83F0740D988B9224F5176FD02EF /* PBXTargetDependency */,
+				B466EDE62E300F1E285EAE6DD188F316 /* PBXTargetDependency */,
+				6254336F9AB4E12A64909A9A9F101D96 /* PBXTargetDependency */,
+			);
+			name = "Pods-MyTranslation-MyTranslationUITests";
+			productName = "Pods-MyTranslation-MyTranslationUITests";
+			productReference = 13D4EABBA66BB5433A02DC91219D12E6 /* Pods_MyTranslation_MyTranslationUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62468BF9C7EDA172E951A24083C3ECA7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */,
+				1700C451C98D9DCECBEDFC5E351C5A9E /* Sources */,
+				AD9C5A8DAF4334B670E91B2EC08DBE2C /* Frameworks */,
+				D098F7F0080A87A1F472C81FC2F85528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = EDD18DBBF8959C7CD83F23E1A60167D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C212BBFAF6FC8270BF5BEF8057998E30 /* IBMSwiftSDKCore */,
+				B2B724283F9BE15AC7375A6203787C69 /* IBMWatsonLanguageTranslatorV3 */,
+				790D9A3C79EC640B4EB9A22A1D94C74E /* Pods-MyTranslation */,
+				CB38172B61AEA7130ED06E5A259D0413 /* Pods-MyTranslation-MyTranslationUITests */,
+				74A119716A8A1C30988C8E091ABEEE63 /* Pods-MyTranslationTests */,
+				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		078F265673789AAF4CACA425B05E06EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		366DBA4C8EB69D4EC0F2468E071776F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFBDD7114B18598AC1BA59DB016BBFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2E5FCF89A50876CD2A2CD2508CE12CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D098F7F0080A87A1F472C81FC2F85528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5D7B54179478836FA7630BAD82959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1700C451C98D9DCECBEDFC5E351C5A9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF6FBC0A64BF107C5D64C61F1397770 /* SwiftyJSON-dummy.m in Sources */,
+				7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207D436BBBF03DD8A413953BAE4DDE28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B023BF1B280B8B23D088DFEACD3294 /* DeleteModelResult.swift in Sources */,
+				161D8DE1CCC889D43E16305E8F6CF3B3 /* DocumentList.swift in Sources */,
+				8C19C43856075AF0D6A3A7D34DDE622E /* DocumentStatus.swift in Sources */,
+				EA997FE5653158E7D4885EE760044848 /* IBMWatsonLanguageTranslatorV3-dummy.m in Sources */,
+				87C63B0411ADC349484FF1657BDA5879 /* IdentifiableLanguage.swift in Sources */,
+				242397FBBB47DE967E9647E6AA35FD02 /* IdentifiableLanguages.swift in Sources */,
+				9DF81BBA19BB83EFCE4A135FC418073D /* IdentifiedLanguage.swift in Sources */,
+				FA925312660FA9C00C4E441A49A8BDD7 /* IdentifiedLanguages.swift in Sources */,
+				40D57B8CE1BA13874CBA86C0198D5AD2 /* InsecureConnection.swift in Sources */,
+				FE092ACB25BC3B5EF2F5086F6639692D /* Language.swift in Sources */,
+				60297FEC5A4143956AF143C2DFA78FEF /* Languages.swift in Sources */,
+				6AEF4C7E00EC43F5E59703137532C2C6 /* LanguageTranslator.swift in Sources */,
+				20D3BF579BE4E401569C0FF1B94EAB97 /* Shared.swift in Sources */,
+				C106600CD1F7268999717B761B791BD7 /* TranslateRequest.swift in Sources */,
+				743D96A10A58BA99CBB51782E9753128 /* Translation.swift in Sources */,
+				616A7E7E891CED75F33BE9E6D24B248E /* TranslationModel.swift in Sources */,
+				16243F482791D3093CFAF721A3291CC5 /* TranslationModels.swift in Sources */,
+				610CA135D25BAD44E047A764D2C75608 /* TranslationResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25A4A6739C25075EA765C2F083ED67C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F0F9F457B95B11C3CF7A0B8C91FD0C /* Pods-MyTranslation-MyTranslationUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41794AAA12C46CD1E820B389596A05EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D168DEEA9F1B0483E5D24C40382A93 /* Authentication.swift in Sources */,
+				59354C94A50B483675B4C9957DA0E761 /* CloudPakForDataAuthenticator.swift in Sources */,
+				B787B5FCD2787858439AF870C5E0B711 /* CodableExtensions.swift in Sources */,
+				891829B1B3A1FE3E3AEEB4517EFE6CA4 /* ConfigBasedAuthenticatorFactory.swift in Sources */,
+				FDFFB46B16962698755E53062E1F40FA /* CredentialUtils.swift in Sources */,
+				AA9560C73201DC9B6F2D888C54935890 /* IAMAuthenticator.swift in Sources */,
+				6463CF8A091A1004DA4C7D6D4C465050 /* IBMSwiftSDKCore-dummy.m in Sources */,
+				6FA1A1CCAC31B709EF1420192C3A2BE0 /* InsecureConnection.swift in Sources */,
+				D75AE0BE3046E4AE278FF5A098B5769A /* JSON.swift in Sources */,
+				785C4BE567B07F4844634B5D0BFA82CA /* JWT.swift in Sources */,
+				5E23AF5BA33DF108D10C3F0C29912CA1 /* MultipartFormData.swift in Sources */,
+				9A5A4C89A39379E1A3EB09F39B2453E3 /* RestError.swift in Sources */,
+				2AAD37619C70C3BAC535E8E96EFA0EE3 /* RestRequest.swift in Sources */,
+				80DF81F082D9C2AE5DA1E8F9FEE8DA80 /* RestResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6911D07301499FB8548E1F9954C5EBCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2386B97E989DA4E11314081720FE75FC /* Pods-MyTranslationTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA7A5D68DA25CDDB62D19BBB1C46FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A314CD826349B399087BA3DD39017CC /* Pods-MyTranslation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1886A83F0740D988B9224F5176FD02EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMSwiftSDKCore;
+			target = C212BBFAF6FC8270BF5BEF8057998E30 /* IBMSwiftSDKCore */;
+			targetProxy = 509507019363017C071DAE199B0C1B1E /* PBXContainerItemProxy */;
+		};
+		20561B1522CF7E85566A7A2B08AAD999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMSwiftSDKCore;
+			target = C212BBFAF6FC8270BF5BEF8057998E30 /* IBMSwiftSDKCore */;
+			targetProxy = 3CB9B3D43488DFF53C15827FF441BE69 /* PBXContainerItemProxy */;
+		};
+		3671FE05D6CCF52FF05ACD303A924C12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMWatsonLanguageTranslatorV3;
+			target = B2B724283F9BE15AC7375A6203787C69 /* IBMWatsonLanguageTranslatorV3 */;
+			targetProxy = B9F65F22EA4C9B571499833C4E2311C2 /* PBXContainerItemProxy */;
+		};
+		56B0A52EF8E84FB59AE11C8C8DA3F1CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 41A8F7A6DF41BCCB13CFA7FFB9E5F145 /* PBXContainerItemProxy */;
+		};
+		5B23A3470BBEC5FB3FC5EE8056502F9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MyTranslation";
+			target = 790D9A3C79EC640B4EB9A22A1D94C74E /* Pods-MyTranslation */;
+			targetProxy = 8C4CE5037F5BF4E59F376EA02CE5D841 /* PBXContainerItemProxy */;
+		};
+		6254336F9AB4E12A64909A9A9F101D96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 26345D090384229169E4DD448C740279 /* PBXContainerItemProxy */;
+		};
+		97425A19079105264E66C2E03D7F365B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMSwiftSDKCore;
+			target = C212BBFAF6FC8270BF5BEF8057998E30 /* IBMSwiftSDKCore */;
+			targetProxy = 0728D295D3DB1142D6199AA39A5D7E5B /* PBXContainerItemProxy */;
+		};
+		B466EDE62E300F1E285EAE6DD188F316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMWatsonLanguageTranslatorV3;
+			target = B2B724283F9BE15AC7375A6203787C69 /* IBMWatsonLanguageTranslatorV3 */;
+			targetProxy = 271BA8C104F802C6EE829D3F4E4FE5E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0010792710E4C4B0B8B5790A066947BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A78E1769BBA7F20027532EF1CCFDF67 /* IBMWatsonLanguageTranslatorV3.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMWatsonLanguageTranslatorV3/IBMWatsonLanguageTranslatorV3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMWatsonLanguageTranslatorV3/IBMWatsonLanguageTranslatorV3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMWatsonLanguageTranslatorV3/IBMWatsonLanguageTranslatorV3.modulemap";
+				PRODUCT_MODULE_NAME = LanguageTranslator;
+				PRODUCT_NAME = LanguageTranslator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		058F873926ADFBBA65704FA747B5C9D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34A767D0A28155655B61855D9F64B63C /* IBMWatsonLanguageTranslatorV3.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMWatsonLanguageTranslatorV3/IBMWatsonLanguageTranslatorV3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMWatsonLanguageTranslatorV3/IBMWatsonLanguageTranslatorV3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMWatsonLanguageTranslatorV3/IBMWatsonLanguageTranslatorV3.modulemap";
+				PRODUCT_MODULE_NAME = LanguageTranslator;
+				PRODUCT_NAME = LanguageTranslator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		212AD62B947D334C2B6C587474BFB513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB57503412E3FA654FB3C986FA6781F3 /* Pods-MyTranslation.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTranslation/Pods-MyTranslation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTranslation/Pods-MyTranslation.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		501C4DDF76F727E13770D67E891EDEF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E690AD846729EFFBAF6519046672DBE /* SwiftyJSON.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52BA21298E78A7C0BC7E6329F417EA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F3C5D8F085D911DDD9FE4304EA4978E /* Pods-MyTranslationTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		71243899B61152433AAE34EE86456EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		747BF09E4BD0722F6F9AF2C6E8F8E859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D43A807A5B50D39B758D47710468A4E /* IBMSwiftSDKCore.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMSwiftSDKCore/IBMSwiftSDKCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMSwiftSDKCore/IBMSwiftSDKCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMSwiftSDKCore/IBMSwiftSDKCore.modulemap";
+				PRODUCT_MODULE_NAME = IBMSwiftSDKCore;
+				PRODUCT_NAME = IBMSwiftSDKCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75D70EEEA0A456E14F7338A7F342964E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7F8E113BCF8222AF00146E6143013414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B14B89E72825832EACFCFBE59958D8 /* Pods-MyTranslationTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		802E736669F5D3ABC8A1527C8143D1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC047F236BF7BACC1E327EED52229CFF /* Pods-MyTranslation-MyTranslationUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		888FC4E1F092971123DF8B6A872F60E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62B7AED906341A97EA7FDCB4F3687A54 /* Pods-MyTranslation.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTranslation/Pods-MyTranslation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTranslation/Pods-MyTranslation.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A134CB181F6656139E7420929FE0A98C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449A92CFF870E75A88C6D2AE21773010 /* Pods-MyTranslation-MyTranslationUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6D1856327C32BF7B667BB2BEEAC10FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 997848EE468B14F17DC2D7EAFAA21F7A /* SwiftyJSON.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC2F8F212BC6738739291A2F284A13A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F10BF0766CD6B8304FED358C7C00A1 /* IBMSwiftSDKCore.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMSwiftSDKCore/IBMSwiftSDKCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMSwiftSDKCore/IBMSwiftSDKCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMSwiftSDKCore/IBMSwiftSDKCore.modulemap";
+				PRODUCT_MODULE_NAME = IBMSwiftSDKCore;
+				PRODUCT_NAME = IBMSwiftSDKCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23DEE66E1CD2ABE0AEDBAC054DB71B34 /* Build configuration list for PBXNativeTarget "IBMWatsonLanguageTranslatorV3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058F873926ADFBBA65704FA747B5C9D6 /* Debug */,
+				0010792710E4C4B0B8B5790A066947BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D70EEEA0A456E14F7338A7F342964E /* Debug */,
+				71243899B61152433AAE34EE86456EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62468BF9C7EDA172E951A24083C3ECA7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6D1856327C32BF7B667BB2BEEAC10FA /* Debug */,
+				501C4DDF76F727E13770D67E891EDEF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6479E0FC4536F509F80B2BB68B6734A3 /* Build configuration list for PBXNativeTarget "Pods-MyTranslation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				212AD62B947D334C2B6C587474BFB513 /* Debug */,
+				888FC4E1F092971123DF8B6A872F60E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8843CC30CDE47856297265C0321AACBF /* Build configuration list for PBXNativeTarget "IBMSwiftSDKCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				747BF09E4BD0722F6F9AF2C6E8F8E859 /* Debug */,
+				FC2F8F212BC6738739291A2F284A13A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8A15A82CB304E69B514657A238C290 /* Build configuration list for PBXNativeTarget "Pods-MyTranslationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F8E113BCF8222AF00146E6143013414 /* Debug */,
+				52BA21298E78A7C0BC7E6329F417EA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2255FE344C88784A97C64F447BF17CD /* Build configuration list for PBXNativeTarget "Pods-MyTranslation-MyTranslationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A134CB181F6656139E7420929FE0A98C /* Debug */,
+				802E736669F5D3ABC8A1527C8143D1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
