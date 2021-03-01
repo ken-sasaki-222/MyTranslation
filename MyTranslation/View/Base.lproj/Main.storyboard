@@ -12,7 +12,7 @@
         <!--ホーム-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,9 @@
                                 <state key="normal" title="翻訳開始">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapStartTranslationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zB2-7m-SXn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +66,11 @@
                     <tabBarItem key="tabBarItem" title="ホーム" id="lmv-bh-v74">
                         <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="afterTextView" destination="SRg-Kq-nB9" id="p7U-NS-0pi"/>
+                        <outlet property="beforTextView" destination="ikJ-xS-r48" id="vU6-ko-WtJ"/>
+                        <outlet property="startTranslationButton" destination="Sjm-h6-lCw" id="9A8-IB-Ihl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
