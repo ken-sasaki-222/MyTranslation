@@ -1,24 +1,28 @@
 PODS:
+  - EMAlertController (1.0.2)
   - IBMSwiftSDKCore (1.0.0)
   - IBMWatsonLanguageTranslatorV3 (3.6.0):
     - IBMSwiftSDKCore (~> 1.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - EMAlertController
   - IBMWatsonLanguageTranslatorV3 (~> 3.6.0)
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - EMAlertController
     - IBMSwiftSDKCore
     - IBMWatsonLanguageTranslatorV3
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  EMAlertController: 471e4630309e5ae843ef71f502d6b58525b22c60
   IBMSwiftSDKCore: 54ad77b03a4d27b218ba514580197db3b89a96ca
   IBMWatsonLanguageTranslatorV3: 41340a76ffad829bf1cedb269c890989ac7654c2
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: cfd130365840dfd461341c4e934238058b34768c
+PODFILE CHECKSUM: e237674c9f4afa94ecb3091c5d7b626736d2b035
 
 COCOAPODS: 1.10.1
