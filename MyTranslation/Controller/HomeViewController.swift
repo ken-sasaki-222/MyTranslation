@@ -36,6 +36,12 @@ class HomeViewController: UIViewController {
     @IBAction func tapStartTranslationButton(_ sender: Any) {
         print("翻訳開始")
     }
+  
     
+    // MARK: - キーボードを閉じる
+    // Viewタップでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
