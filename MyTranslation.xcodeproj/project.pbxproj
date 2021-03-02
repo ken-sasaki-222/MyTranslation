@@ -17,6 +17,7 @@
 		45621B0525ED328B005D703C /* MyTranslationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45621B0425ED328B005D703C /* MyTranslationUITests.swift */; };
 		456891B725ED354200DA9582 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891B625ED354200DA9582 /* ApiKey.swift */; };
 		456891C225EDC38D00DA9582 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891C125EDC38D00DA9582 /* TabBarController.swift */; };
+		456891C925EDD0B600DA9582 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891C825EDD0B600DA9582 /* CornerRadius.swift */; };
 		A98203F5B1D65A316B63CEF7 /* Pods_MyTranslationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47E42E161671DE20D27718A /* Pods_MyTranslationTests.framework */; };
 		B70E9256ED3E6FDA7E38F6A5 /* Pods_MyTranslation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7AD437A591B7610DC12D4B /* Pods_MyTranslation.framework */; };
 		F0FB4496F64DFCDDCF0BF866 /* Pods_MyTranslation_MyTranslationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3641C32E10EABAC9332F54 /* Pods_MyTranslation_MyTranslationUITests.framework */; };
@@ -58,6 +59,7 @@
 		45621B1825ED3389005D703C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		456891B625ED354200DA9582 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		456891C125EDC38D00DA9582 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		456891C825EDD0B600DA9582 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		51548372E88A16ABC9C3241D /* Pods-MyTranslationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslationTests.release.xcconfig"; path = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B8DF68BFE055E6F782F898 /* Pods-MyTranslationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslationTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A95163D863C4252E9F8F8B0E /* Pods-MyTranslation-MyTranslationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		456891B225ED34F900DA9582 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				456891C625EDD02B00DA9582 /* IntegerGroup */,
 				456891B525ED353100DA9582 /* AuthenticationGroup */,
 			);
 			path = Model;
@@ -196,6 +199,14 @@
 				456891B625ED354200DA9582 /* ApiKey.swift */,
 			);
 			path = AuthenticationGroup;
+			sourceTree = "<group>";
+		};
+		456891C625EDD02B00DA9582 /* IntegerGroup */ = {
+			isa = PBXGroup;
+			children = (
+				456891C825EDD0B600DA9582 /* CornerRadius.swift */,
+			);
+			path = IntegerGroup;
 			sourceTree = "<group>";
 		};
 		D3AF66D6491EC4E4BF4E90CB /* Frameworks */ = {
@@ -448,6 +459,7 @@
 			files = (
 				45621AE725ED3289005D703C /* HomeViewController.swift in Sources */,
 				45621AE325ED3289005D703C /* AppDelegate.swift in Sources */,
+				456891C925EDD0B600DA9582 /* CornerRadius.swift in Sources */,
 				456891B725ED354200DA9582 /* ApiKey.swift in Sources */,
 				456891C225EDC38D00DA9582 /* TabBarController.swift in Sources */,
 				45621AE525ED3289005D703C /* SceneDelegate.swift in Sources */,
