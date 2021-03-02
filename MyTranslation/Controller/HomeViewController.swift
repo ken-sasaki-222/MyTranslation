@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import EMAlertController
+
 
 // テキスト入力による翻訳をおこなうクラス
 class HomeViewController: UIViewController, ReturnTranslationText {
@@ -35,16 +37,34 @@ class HomeViewController: UIViewController, ReturnTranslationText {
     // MARK: - 翻訳開始ボタン
     // 翻訳開始をタップすると呼ばれる
     @IBAction func tapStartTranslationButton(_ sender: Any) {
-        print("翻訳開始")
         
-        // beforTextViewのテキストを読み取ってTranslationModelと通信をおこなう
-        let translationModel = TranslationModel(Key: TRANSLATION_KEY, version: TRANSLATION_VER, url: TRANSLATION_URL, text: beforTextView.text)
+        // 翻訳前がnilの場合はアラートを表示
+        if beforTextView.text == "" {
+            
+            // アラートのインスタンス
+            let alert = EMAlertController(icon   : UIImage(named: "キャンセル"),
+                                          title  : "翻訳できません",
+                                          message: "翻訳する文字を入力して下さい")
+            
+            // アラートのアクションを設定しアラートを追加
+            let doneAction = EMAlertAction(title: "やり直す", style: .normal)
+            alert.addAction(doneAction)
+            
+            // アラートの表示
+            present(alert, animated: true, completion: nil)
+        } else {
+            
+            // beforTextViewのテキストを読み取ってTranslationModelと通信をおこなう
+            let translationModel = TranslationModel(Key: TRANSLATION_KEY, version: TRANSLATION_VER, url: TRANSLATION_URL, text: beforTextView.text)
+            
+            // 翻訳言語を渡してメソッドを呼ぶ
+            translationModel.startTranslation(language: "en-ja")
+            
+            // デリゲートを委託
+            translationModel.returnTranslationText = self
+        }
         
-        // 翻訳言語を渡してメソッドを呼ぶ
-        translationModel.startTranslation(language: "en-ja")
-        
-        // デリゲートを委託
-        translationModel.returnTranslationText = self
+        // 翻訳種類を複数作成して、選択されたものと同じ値をstartTranslationに渡す
     }
     
     
