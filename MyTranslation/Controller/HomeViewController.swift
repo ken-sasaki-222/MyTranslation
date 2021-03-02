@@ -29,12 +29,18 @@ class HomeViewController: UIViewController {
         afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.eight)
         startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.eight)
     }
+    
 
-
-    // MARK: 翻訳開始ボタン
+    // MARK: - 翻訳開始ボタン
     // 翻訳開始をタップすると呼ばれる
     @IBAction func tapStartTranslationButton(_ sender: Any) {
         print("翻訳開始")
+        
+        // beforTextViewのテキストを読み取ってTranslationModelと通信をおこなう
+        let translationModel = TranslationModel(Key: TRANSLATION_KEY, version: TRANSLATION_VER, url: TRANSLATION_URL, beforeTranslationText: beforTextView.text)
+        
+        // 翻訳実行メソッドを呼び出す
+        translationModel.startTranslation()
     }
   
     
