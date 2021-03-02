@@ -80,7 +80,16 @@ class HomeViewController: UIViewController, ReturnTranslationText {
             self.afterTextView.text = returnText
         }
     }
-  
+    
+    
+    // MARK: - クリアアクション
+    // クリアボタンをタップすると呼ばれる
+    @IBAction func tapclearButton(_ sender: Any) {
+        
+        beforTextView.text = nil
+        afterTextView.text = nil
+    }
+    
     
     // MARK: - キーボードを閉じる
     // Viewタップでキーボードを閉じる
