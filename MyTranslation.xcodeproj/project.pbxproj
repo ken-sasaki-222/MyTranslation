@@ -19,6 +19,8 @@
 		456891C225EDC38D00DA9582 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891C125EDC38D00DA9582 /* TabBarController.swift */; };
 		456891C925EDD0B600DA9582 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891C825EDD0B600DA9582 /* CornerRadius.swift */; };
 		456891CF25EDDBE500DA9582 /* TranslationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891CE25EDDBE500DA9582 /* TranslationModel.swift */; };
+		456891D425EDFE6900DA9582 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891D325EDFE6900DA9582 /* Translation.swift */; };
+		456891D925EE012A00DA9582 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891D825EE012A00DA9582 /* Count.swift */; };
 		A98203F5B1D65A316B63CEF7 /* Pods_MyTranslationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47E42E161671DE20D27718A /* Pods_MyTranslationTests.framework */; };
 		B70E9256ED3E6FDA7E38F6A5 /* Pods_MyTranslation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7AD437A591B7610DC12D4B /* Pods_MyTranslation.framework */; };
 		F0FB4496F64DFCDDCF0BF866 /* Pods_MyTranslation_MyTranslationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3641C32E10EABAC9332F54 /* Pods_MyTranslation_MyTranslationUITests.framework */; };
@@ -62,6 +64,8 @@
 		456891C125EDC38D00DA9582 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		456891C825EDD0B600DA9582 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		456891CE25EDDBE500DA9582 /* TranslationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationModel.swift; sourceTree = "<group>"; };
+		456891D325EDFE6900DA9582 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		456891D825EE012A00DA9582 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 		51548372E88A16ABC9C3241D /* Pods-MyTranslationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslationTests.release.xcconfig"; path = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B8DF68BFE055E6F782F898 /* Pods-MyTranslationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslationTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A95163D863C4252E9F8F8B0E /* Pods-MyTranslation-MyTranslationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				456891C825EDD0B600DA9582 /* CornerRadius.swift */,
+				456891D825EE012A00DA9582 /* Count.swift */,
 			);
 			path = IntegerGroup;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				456891CE25EDDBE500DA9582 /* TranslationModel.swift */,
+				456891D325EDFE6900DA9582 /* Translation.swift */,
 			);
 			path = TranslationGroup;
 			sourceTree = "<group>";
@@ -471,7 +477,9 @@
 				45621AE725ED3289005D703C /* HomeViewController.swift in Sources */,
 				45621AE325ED3289005D703C /* AppDelegate.swift in Sources */,
 				456891C925EDD0B600DA9582 /* CornerRadius.swift in Sources */,
+				456891D425EDFE6900DA9582 /* Translation.swift in Sources */,
 				456891B725ED354200DA9582 /* ApiKey.swift in Sources */,
+				456891D925EE012A00DA9582 /* Count.swift in Sources */,
 				456891C225EDC38D00DA9582 /* TabBarController.swift in Sources */,
 				456891CF25EDDBE500DA9582 /* TranslationModel.swift in Sources */,
 				45621AE525ED3289005D703C /* SceneDelegate.swift in Sources */,

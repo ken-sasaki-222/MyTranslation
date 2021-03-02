@@ -8,9 +8,10 @@
 import UIKit
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ReturnTranslationText {
     
-    // MARK: プロパティ
+    
+    // MARK: - プロパティ
     // 翻訳前のテキストビュー
     @IBOutlet weak var beforTextView: UITextView!
     
@@ -37,10 +38,27 @@ class HomeViewController: UIViewController {
         print("翻訳開始")
         
         // beforTextViewのテキストを読み取ってTranslationModelと通信をおこなう
-        let translationModel = TranslationModel(Key: TRANSLATION_KEY, version: TRANSLATION_VER, url: TRANSLATION_URL, beforeTranslationText: beforTextView.text)
+        let translationModel = TranslationModel(Key: TRANSLATION_KEY, version: TRANSLATION_VER, url: TRANSLATION_URL, text: beforTextView.text)
         
-        // 翻訳実行メソッドを呼び出す
-        translationModel.startTranslation()
+        // 翻訳言語を渡してメソッドを呼ぶ
+        translationModel.startTranslation(language: "en-ja")
+        
+        // デリゲートを委託
+        translationModel.returnTranslationText = self
+    }
+    
+    
+    // MARK: - 翻訳終了
+    // TranslationModelから値を受け取る
+    func returnTranslationText(text: String) {
+        
+        // 翻訳結果のインスタンス作成
+        let returnText = text
+        
+        // 翻訳結果をViewに反映
+        DispatchQueue.main.async {
+            self.afterTextView.text = returnText
+        }
     }
   
     
