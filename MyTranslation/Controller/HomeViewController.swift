@@ -24,6 +24,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // テキストビュー & ボタンの角丸
+        beforTextView.layer.cornerRadius          = 8
+        afterTextView.layer.cornerRadius          = 8
+        startTranslationButton.layer.cornerRadius = 8
     }
 
 
