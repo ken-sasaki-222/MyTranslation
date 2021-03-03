@@ -36,16 +36,19 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     var afterLanguagePicker = UIPickerView()
     
     // ピッカーに表示する言語配列
-    let languageArray = ["日本語", "英語", "韓国語", "中国語"]
+    let languageArray = ["言語を選択", "日本語", "英語", "韓国語", "中国語"]
+    
+    // 原文-訳文を保存してModelへ渡す
+    var language: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // テキストビュー & ボタンの角丸
-        beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.eight)
-        afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.eight)
-        startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.eight)
+        beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
+        afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
+        startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.size)
         
         // 言語選択Pickerを呼び出す（原文）
         createBeforLanguagePickerView()
@@ -160,7 +163,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             // アラートのインスタンス
             let alert = EMAlertController(icon   : UIImage(named: "キャンセル"),
                                           title  : "翻訳できません",
-                                          message: "原文を入力して下さい")
+                                          message: "原文を入力またはペーストして下さい")
             
             // アラートのアクションを設定しアラートを追加
             let doneAction = EMAlertAction(title: "やり直す", style: .normal)
@@ -173,11 +176,89 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             // beforTextViewのテキストを読み取ってTranslationModelと通信をおこなう
             let translationModel = TranslationModel(Key: TRANSLATION_KEY, version: TRANSLATION_VER, url: TRANSLATION_URL, text: beforTextView.text)
             
-            // 翻訳種類を複数作成して、選択されたものと同じ値をstartTranslationに渡す
+            // languageに値を保存する処理を分岐
+            switch language == nil {
             
-            // 原文を渡してメソッドを呼ぶ
-            translationModel.startTranslation(language: "en-ja")
             
+            // MARK: - 原文英語
+            // 原文が英語で訳文が日本語の場合
+            case beforLanguageText!.text == "英語" && afterLanguageText!.text == "日本語":
+                language = "en-ja"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が英語で訳文が韓国語の場合
+            case beforLanguageText!.text == "英語" && afterLanguageText!.text == "韓国語":
+                language = "en-ko"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が英語で訳文が中国語の場合
+            case beforLanguageText!.text == "英語" && afterLanguageText!.text == "中国語":
+                language = "en-zh"
+                translationModel.startTranslation(language: language!)
+                
+                
+            // MARK: - 原文韓国語
+            // 原文が韓国語で訳文が日本語の場合
+            case beforLanguageText!.text == "韓国語" && afterLanguageText!.text == "日本語":
+                language = "ko-ja"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が韓国語で訳文が英語の場合
+            case beforLanguageText!.text == "韓国語" && afterLanguageText!.text == "英語":
+                language = "ko-en"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が韓国語で訳文が中国語の場合
+            case beforLanguageText!.text == "韓国語" && afterLanguageText!.text == "中国語":
+                language = "ko-zh"
+                translationModel.startTranslation(language: language!)
+                
+                
+            // MARK: - 原文中国語
+            // 原文が中国語で訳文が日本語の場合
+            case beforLanguageText!.text == "中国語" && afterLanguageText!.text == "日本語":
+                language = "zh-ja"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が中国語で訳文が英語の場合
+            case beforLanguageText!.text == "中国語" && afterLanguageText!.text == "英語":
+                language = "zh-en"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が中国語で訳文が韓国語の場合
+            case beforLanguageText!.text == "中国語" && afterLanguageText!.text == "韓国語":
+                language = "zh-ko"
+                translationModel.startTranslation(language: language!)
+                
+                
+            // MARK: - 原文日本語
+            // 原文が日本語で訳文が英語の場合
+            case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "英語":
+                language = "ja-en"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が日本語で訳文が韓国語の場合
+            case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "韓国語":
+                language = "ja-ko"
+                translationModel.startTranslation(language: language!)
+                
+            // 原文が日本語で訳文が中国語の場合
+            case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "中国語":
+                language = "ja-zh"
+                translationModel.startTranslation(language: language!)
+            default:
+                // アラートのインスタンス
+                let alert = EMAlertController(icon   : UIImage(named: "キャンセル"),
+                                              title  : "翻訳できません",
+                                              message: "原文と訳文の言語を選択して下さい")
+                
+                // アラートのアクションを設定しアラートを追加
+                let doneAction = EMAlertAction(title: "やり直す", style: .normal)
+                alert.addAction(doneAction)
+                
+                // アラートの表示
+                present(alert, animated: true, completion: nil)
+            }
             // デリゲートを委託
             translationModel.returnTranslationText = self
         }
@@ -187,6 +268,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     // MARK: - 翻訳終了処理
     // TranslationModelから値を受け取る
     func returnTranslationText(text: String) {
+        
+        // 次の翻訳に備えて値をnilに
+        language = nil
         
         // 翻訳結果のインスタンス作成
         let returnText = text
