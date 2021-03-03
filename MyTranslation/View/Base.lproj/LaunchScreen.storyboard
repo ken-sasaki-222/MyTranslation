@@ -15,19 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ローンチ画面" translatesAutoresizingMaskIntoConstraints="NO" id="rQM-GN-hlC">
-                                <rect key="frame" x="0.0" y="0.0" width="508" height="1224"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ローンチ画面" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-nF-5Nz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rQM-GN-hlC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="233-Ym-Ukl"/>
-                            <constraint firstItem="rQM-GN-hlC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Gp3-TG-fy0"/>
-                            <constraint firstAttribute="bottom" secondItem="rQM-GN-hlC" secondAttribute="bottom" id="I3j-RY-vMa"/>
-                            <constraint firstItem="rQM-GN-hlC" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dop-6f-FsH"/>
-                            <constraint firstItem="rQM-GN-hlC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oRY-g7-mcG"/>
-                            <constraint firstItem="rQM-GN-hlC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y6K-S9-Rum"/>
+                            <constraint firstAttribute="bottom" secondItem="bpv-nF-5Nz" secondAttribute="bottom" id="1s6-VY-0MQ"/>
+                            <constraint firstItem="bpv-nF-5Nz" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AxE-u1-Gwe"/>
+                            <constraint firstItem="bpv-nF-5Nz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="KNt-Le-7LG"/>
+                            <constraint firstItem="bpv-nF-5Nz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lj7-7w-oUr"/>
+                            <constraint firstItem="bpv-nF-5Nz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hxA-rd-ptM"/>
+                            <constraint firstItem="bpv-nF-5Nz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yGm-P2-mCQ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ローンチ画面" width="414" height="896"/>
+        <image name="ローンチ画面" width="828" height="1792"/>
     </resources>
 </document>
