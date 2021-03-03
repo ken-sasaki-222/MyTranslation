@@ -11,4 +11,6 @@ import Foundation
 class Count {
     
     static var zero = 0
+    static var one  = 1
+    static var two  = 2
 }
