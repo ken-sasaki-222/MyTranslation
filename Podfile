@@ -8,6 +8,7 @@ target 'MyTranslation' do
   # Pods for MyTranslation
   pod 'IBMWatsonLanguageTranslatorV3', '~> 3.6.0'
   pod 'SwiftyJSON'
+  pod 'EMAlertController'
 
   target 'MyTranslationTests' do
     inherit! :search_paths
