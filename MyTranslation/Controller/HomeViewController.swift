@@ -35,6 +35,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     // 言語を選択するピッカー（訳文）
     var afterLanguagePicker = UIPickerView()
     
+    // 原文-訳文をクリアするボタン
+    @IBOutlet weak var freshButton: UIButton!
+    
     // ピッカーに表示する言語配列
     let languageArray = ["言語を選択", "日本語", "英語", "韓国語", "中国語"]
     
@@ -49,6 +52,21 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
         afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
         startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.size)
+        
+        // パーツの配色設定（ベースカラー）
+        view.backgroundColor              = ColorList.baseColor
+        beforLanguageText.backgroundColor = ColorList.baseColor
+        afterLanguageText.backgroundColor = ColorList.baseColor
+        
+        // パーツの配色設定（メインカラー）
+        beforTextView.backgroundColor = ColorList.mainColor
+        afterTextView.backgroundColor = ColorList.mainColor
+        
+        // パーツの配色設定（アイテムカラー）
+        freshButton.tintColor = ColorList.itemColor
+        
+        // パーツの配色設定（アクセントカラー）
+        startTranslationButton.backgroundColor = ColorList.accentColor
         
         // 言語選択Pickerを呼び出す（原文）
         createBeforLanguagePickerView()

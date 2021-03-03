@@ -84,6 +84,7 @@
                         <outlet property="afterTextView" destination="SRg-Kq-nB9" id="p7U-NS-0pi"/>
                         <outlet property="beforLanguageText" destination="uVO-lj-bfv" id="gGL-5H-EbP"/>
                         <outlet property="beforTextView" destination="ikJ-xS-r48" id="vU6-ko-WtJ"/>
+                        <outlet property="freshButton" destination="WoL-tD-gfP" id="G3O-i7-z4N"/>
                         <outlet property="startTranslationButton" destination="Sjm-h6-lCw" id="9A8-IB-Ihl"/>
                     </connections>
                 </viewController>

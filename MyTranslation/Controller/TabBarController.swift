@@ -14,10 +14,10 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // アプリ起動時のTabBarItemの色
-        UITabBar.appearance().tintColor = UIColor.systemGreen
+        UITabBar.appearance().tintColor = ColorList.accentColor
         
         // TabBarの背景色
-        tabBar.backgroundColor = UIColor.white
+        tabBar.backgroundColor = ColorList.mainColor
         
         // TabBarの背景がすりガラスのようになるので防止
         UITabBar.appearance().backgroundImage = UIImage()
@@ -29,10 +29,10 @@ class TabBarController: UITabBarController {
         // Tabのtagで処理を分岐
         switch item.title {
         case "ホーム":
-            UITabBar.appearance().tintColor = UIColor.systemGreen
+            UITabBar.appearance().tintColor = ColorList.accentColor
         default:
             // TabBarItem非選択時の色
-            tabBar.unselectedItemTintColor =  UIColor.gray
+            tabBar.unselectedItemTintColor = ColorList.notSelectColor
         }
     }
 }

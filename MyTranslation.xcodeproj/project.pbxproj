@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454C353F25EFB44D005174E1 /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C353E25EFB44D005174E1 /* ColorList.swift */; };
+		454C354925EFB4E9005174E1 /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C354825EFB4E9005174E1 /* UIColor+HexColor.swift */; };
 		45621AE325ED3289005D703C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45621AE225ED3289005D703C /* AppDelegate.swift */; };
 		45621AE525ED3289005D703C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45621AE425ED3289005D703C /* SceneDelegate.swift */; };
 		45621AE725ED3289005D703C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45621AE625ED3289005D703C /* HomeViewController.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		0E3641C32E10EABAC9332F54 /* Pods_MyTranslation_MyTranslationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTranslation_MyTranslationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		454C353E25EFB44D005174E1 /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
+		454C354825EFB4E9005174E1 /* UIColor+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
 		45621ADF25ED3289005D703C /* MyTranslation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTranslation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45621AE225ED3289005D703C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45621AE425ED3289005D703C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		454C353D25EFB424005174E1 /* ColorGroup */ = {
+			isa = PBXGroup;
+			children = (
+				454C353E25EFB44D005174E1 /* ColorList.swift */,
+			);
+			path = ColorGroup;
+			sourceTree = "<group>";
+		};
+		454C354625EFB497005174E1 /* ExtensionsGroup */ = {
+			isa = PBXGroup;
+			children = (
+				454C354725EFB4C5005174E1 /* UIColor */,
+			);
+			path = ExtensionsGroup;
+			sourceTree = "<group>";
+		};
+		454C354725EFB4C5005174E1 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				454C354825EFB4E9005174E1 /* UIColor+HexColor.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		45621AD625ED3289005D703C = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				456891CD25EDD87400DA9582 /* TranslationGroup */,
+				454C353D25EFB424005174E1 /* ColorGroup */,
 				456891C625EDD02B00DA9582 /* IntegerGroup */,
+				454C354625EFB497005174E1 /* ExtensionsGroup */,
 				456891B525ED353100DA9582 /* AuthenticationGroup */,
 			);
 			path = Model;
@@ -477,6 +507,8 @@
 				45621AE725ED3289005D703C /* HomeViewController.swift in Sources */,
 				45621AE325ED3289005D703C /* AppDelegate.swift in Sources */,
 				456891C925EDD0B600DA9582 /* CornerRadius.swift in Sources */,
+				454C353F25EFB44D005174E1 /* ColorList.swift in Sources */,
+				454C354925EFB4E9005174E1 /* UIColor+HexColor.swift in Sources */,
 				456891D425EDFE6900DA9582 /* Translation.swift in Sources */,
 				456891B725ED354200DA9582 /* ApiKey.swift in Sources */,
 				456891D925EE012A00DA9582 /* Count.swift in Sources */,
