@@ -296,6 +296,10 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         // 翻訳結果のインスタンス作成
         let returnText = text
         
+        // ローカルに値を保存して履歴ページで扱う
+        
+        
+        
         // 翻訳結果をViewに反映
         DispatchQueue.main.async {
             self.afterTextView.text = returnText

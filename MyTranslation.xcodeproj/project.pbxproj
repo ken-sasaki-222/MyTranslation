@@ -145,6 +145,22 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		454C355325F08743005174E1 /* TabBarGroup */ = {
+			isa = PBXGroup;
+			children = (
+				456891C125EDC38D00DA9582 /* TabBarController.swift */,
+			);
+			path = TabBarGroup;
+			sourceTree = "<group>";
+		};
+		454C355425F0875A005174E1 /* TranslationGroup */ = {
+			isa = PBXGroup;
+			children = (
+				45621AE625ED3289005D703C /* HomeViewController.swift */,
+			);
+			path = TranslationGroup;
+			sourceTree = "<group>";
+		};
 		45621AD625ED3289005D703C = {
 			isa = PBXGroup;
 			children = (
@@ -214,8 +230,8 @@
 		456891B325ED350300DA9582 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				45621AE625ED3289005D703C /* HomeViewController.swift */,
-				456891C125EDC38D00DA9582 /* TabBarController.swift */,
+				454C355325F08743005174E1 /* TabBarGroup */,
+				454C355425F0875A005174E1 /* TranslationGroup */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
