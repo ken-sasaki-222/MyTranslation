@@ -12,8 +12,8 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     // やること
-    // カスタムセルを用いてセルを構築
-    // TabをHomeVCと合わせてカスタム
+    // カスタムセルを用いてセルを構築 ✔︎
+    // TabをHomeVCと合わせてカスタム ✔︎
     // アプリ内に値を保存してそれを反映
 
     
@@ -58,6 +58,12 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // セルの背景色
         cell.recordCell.backgroundColor = ColorList.baseColor
+        
+        // セルのタップを無効化
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        
+        // 空のセルを削除
+        recordTableView.tableFooterView = UIView(frame: .zero)
         
         return cell
     }
