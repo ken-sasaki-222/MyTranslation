@@ -36,6 +36,10 @@ class TabBarController: UITabBarController {
         switch item.title {
         case "ホーム":
             UITabBar.appearance().tintColor = ColorList.itemColor
+        case "履歴":
+            UITabBar.appearance().tintColor = ColorList.itemColor
+        case "メニュー":
+            UITabBar.appearance().tintColor = ColorList.itemColor
         default:
             // TabBarItem非選択時の色
             tabBar.unselectedItemTintColor = ColorList.notSelectColor

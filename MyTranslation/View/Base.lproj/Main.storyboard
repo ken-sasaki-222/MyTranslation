@@ -90,7 +90,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="77.678571428571431"/>
+            <point key="canvasLocation" x="-770" y="832"/>
+        </scene>
+        <!--履歴-->
+        <scene sceneID="C40-r1-7ht">
+            <objects>
+                <viewController id="ro9-ag-nCn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QjF-NI-gPD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zKQ-Ww-owe"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="履歴" id="ORQ-6x-92X">
+                        <imageReference key="image" image="timer" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYF-zz-fev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="832"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="x1W-4y-bJ8">
@@ -104,16 +122,38 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CRM-12-YUv"/>
+                        <segue destination="ro9-ag-nCn" kind="relationship" relationship="viewControllers" id="thE-kN-byN"/>
+                        <segue destination="E9W-FX-kmu" kind="relationship" relationship="viewControllers" id="A7M-S7-XYD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eN-Ib-00D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="77.678571428571431"/>
         </scene>
+        <!--メニュー-->
+        <scene sceneID="CxL-nr-DeR">
+            <objects>
+                <viewController id="E9W-FX-kmu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ww6-pw-vhc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ROj-mo-mRK"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="メニュー" id="jyr-fw-K4a">
+                        <imageReference key="image" image="filemenu.and.cursorarrow" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcz-n4-W7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="832"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
