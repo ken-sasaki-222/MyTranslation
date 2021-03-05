@@ -153,7 +153,7 @@
         <!--メニュー-->
         <scene sceneID="CxL-nr-DeR">
             <objects>
-                <viewController id="E9W-FX-kmu" sceneMemberID="viewController">
+                <viewController id="E9W-FX-kmu" customClass="MenuViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ww6-pw-vhc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
