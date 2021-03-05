@@ -16,6 +16,9 @@ class RecordCell: UITableViewCell {
     // セル本体
     @IBOutlet weak var recordCell: UIView!
     
+    // 履歴件数を表示するラベル
+    @IBOutlet weak var recordCountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

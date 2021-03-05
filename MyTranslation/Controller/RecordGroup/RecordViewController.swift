@@ -59,7 +59,11 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath) as! RecordCell
         
-        // セルのラベルに翻訳結果履歴を反映
+        // 履歴件数を反映
+        cell.recordCountLabel.text = "【 \(indexPath.row + Count.one)件前の翻訳 】"
+        cell.recordCountLabel.textColor = ColorList.notSelectColor
+        
+        // 翻訳結果履歴を反映
         cell.recordLabel.text = recordValue[indexPath.row]
         
         // セルとTableViewの背景色
