@@ -12,7 +12,7 @@ import UIKit
 class ColorList {
     
     // ベースカラー（主に背景色）
-    static var baseColor      = UIColor(hex: "f5f5dc")
+    static var baseColor      = UIColor(hex: "f8f4e6")
     
     // メインカラー（Textviewなど）
     static var mainColor      = UIColor.systemBackground
