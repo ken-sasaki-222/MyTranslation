@@ -11,16 +11,12 @@ import UIKit
 class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    // やること
-    // カスタムセルを用いてセルを構築 ✔︎
-    // TabをHomeVCと合わせてカスタム ✔︎
-    // アプリ内に値を保存してそれを反映
-
-    
     // MARK: - プロパティ
     // TableViewのインスタンス
     @IBOutlet weak var recordTableView: UITableView!
     
+    // ローカルに保存した翻訳結果を取得する値
+    var recordValue: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +24,22 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // ダークモード適用を回避
         self.overrideUserInterfaceStyle = .light
         
-        // パーツの配色設定（ベースカラー）
-        recordTableView.backgroundColor = ColorList.baseColor
-        
         // デリゲートを委託
         recordTableView.delegate   = self
         recordTableView.dataSource = self
         
         // カスタムセルを委託
         recordTableView.register(UINib(nibName: "RecordCell", bundle: nil), forCellReuseIdentifier: "recordCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // ローカルに保存した値を取得
+        recordValue = UserDefaults.standard.array(forKey: "returnTextArray") as! [String]
+        
+        // TableViewの更新
+        recordTableView.reloadData()
     }
     
     
@@ -48,7 +51,7 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // セルの数を決める
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return recordValue.count
     }
     
     // セルを構築する
@@ -56,8 +59,12 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath) as! RecordCell
         
-        // セルの背景色
+        // セルのラベルに翻訳結果履歴を反映
+        cell.recordLabel.text = recordValue[indexPath.row]
+        
+        // セルとTableViewの背景色
         cell.recordCell.backgroundColor = ColorList.baseColor
+        recordTableView.backgroundColor = ColorList.baseColor
         
         // セルのタップを無効化
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
