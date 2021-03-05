@@ -44,6 +44,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     // 原文-訳文を保存してModelへ渡す
     var language: String?
     
+    // 翻訳履歴を保存する配列
+    var returnTextArray: [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +73,17 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         
         // パーツの配色設定（アクセントカラー）
         startTranslationButton.backgroundColor = ColorList.accentColor
+        
+        // ローカルに保存されている翻訳履歴が空であれば呼ばれる
+        if  UserDefaults.standard.array(forKey: "returnTextArray")!.count == Count.zero {
+            
+            // エラー回避の為に値を保存
+            returnTextArray.append("ここに翻訳履歴が入ります。")
+            returnTextArray.append("最新10件までを表示します。")
+            
+            // ローカルに保存
+            UserDefaults.standard.set(returnTextArray, forKey: "returnTextArray")
+        }
         
         // 言語選択Pickerを呼び出す（原文）
         createBeforLanguagePickerView()
@@ -296,10 +310,26 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         // 翻訳結果のインスタンス作成
         let returnText = text
         
-        // ローカルに値を保存して履歴ページで扱う
-        
-        
-        
+        // 履歴ページで扱う配列の構築
+        if UserDefaults.standard.array(forKey: "returnTextArray")!.count < 10 {
+            
+            // 翻訳結果10件までを新しい順に若番に保存
+            returnTextArray.insert(returnText, at: Count.zero)
+            
+            // ローカルに値を保存
+            UserDefaults.standard.set(returnTextArray, forKey: "returnTextArray")
+        } else {
+            
+            // 配列の最後の要素を削除して
+            returnTextArray.removeLast()
+            
+            // 配列の頭に値を保存
+            returnTextArray.insert(returnText, at: Count.zero)
+            
+            // ローカルに値を保存
+            UserDefaults.standard.set(returnTextArray, forKey: "returnTextArray")
+        }
+            
         // 翻訳結果をViewに反映
         DispatchQueue.main.async {
             self.afterTextView.text = returnText
