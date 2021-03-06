@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		451874F125F0903B005A9664 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451874F025F0903B005A9664 /* RecordViewController.swift */; };
+		452145BE25F21F6400F7FAE1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452145BD25F21F6400F7FAE1 /* MenuViewController.swift */; };
 		454C353F25EFB44D005174E1 /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C353E25EFB44D005174E1 /* ColorList.swift */; };
 		454C354925EFB4E9005174E1 /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C354825EFB4E9005174E1 /* UIColor+HexColor.swift */; };
 		454C355A25F08CB9005174E1 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C355825F08CB9005174E1 /* RecordCell.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0E3641C32E10EABAC9332F54 /* Pods_MyTranslation_MyTranslationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTranslation_MyTranslationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		451874F025F0903B005A9664 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		452145BD25F21F6400F7FAE1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		454C353E25EFB44D005174E1 /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		454C354825EFB4E9005174E1 /* UIColor+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
 		454C355825F08CB9005174E1 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 				451874F025F0903B005A9664 /* RecordViewController.swift */,
 			);
 			path = RecordGroup;
+			sourceTree = "<group>";
+		};
+		452145BC25F21F4500F7FAE1 /* MenuGroup */ = {
+			isa = PBXGroup;
+			children = (
+				452145BD25F21F6400F7FAE1 /* MenuViewController.swift */,
+			);
+			path = MenuGroup;
 			sourceTree = "<group>";
 		};
 		454C353D25EFB424005174E1 /* ColorGroup */ = {
@@ -265,6 +275,7 @@
 				454C355325F08743005174E1 /* TabBarGroup */,
 				454C355425F0875A005174E1 /* TranslationGroup */,
 				451874EF25F09001005A9664 /* RecordGroup */,
+				452145BC25F21F4500F7FAE1 /* MenuGroup */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -557,6 +568,7 @@
 				45621AE725ED3289005D703C /* HomeViewController.swift in Sources */,
 				45621AE325ED3289005D703C /* AppDelegate.swift in Sources */,
 				456891C925EDD0B600DA9582 /* CornerRadius.swift in Sources */,
+				452145BE25F21F6400F7FAE1 /* MenuViewController.swift in Sources */,
 				454C353F25EFB44D005174E1 /* ColorList.swift in Sources */,
 				454C354925EFB4E9005174E1 /* UIColor+HexColor.swift in Sources */,
 				456891D425EDFE6900DA9582 /* Translation.swift in Sources */,
