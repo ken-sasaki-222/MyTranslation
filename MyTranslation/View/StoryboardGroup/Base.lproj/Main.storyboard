@@ -157,23 +157,138 @@
                     <view key="view" contentMode="scaleToFill" id="Ww6-pw-vhc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-c5-klc">
+                                <rect key="frame" x="42" y="122" width="150" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bno-F0-6hI">
+                                        <rect key="frame" x="15" y="141" width="120" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="レビュー" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-Cb-90f">
+                                        <rect key="frame" x="25" y="18" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eIV-d3-t8h" appends="YES" id="OOh-Ng-naY"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mi7-9f-NlZ">
+                                <rect key="frame" x="226" y="122" width="150" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="お問い合わせ" translatesAutoresizingMaskIntoConstraints="NO" id="lat-cp-iB2">
+                                        <rect key="frame" x="25" y="18" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-fC-ys8">
+                                        <rect key="frame" x="15" y="140" width="120" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="V9W-yL-IME" appends="YES" id="Lda-fl-vq5"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-dc-wma">
+                                <rect key="frame" x="40" y="358" width="150" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-mM-zyN">
+                                        <rect key="frame" x="15" y="141" width="120" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Twitter紹介" translatesAutoresizingMaskIntoConstraints="NO" id="JHo-Yu-arw">
+                                        <rect key="frame" x="25" y="18" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dTT-JU-lPB" appends="YES" id="YBr-RB-qYx"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYC-EY-M3r">
+                                <rect key="frame" x="224" y="358" width="150" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vS-Qt-k0b">
+                                        <rect key="frame" x="15" y="141" width="120" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="バージョン" translatesAutoresizingMaskIntoConstraints="NO" id="t3r-uz-f15">
+                                        <rect key="frame" x="25" y="18" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ROj-mo-mRK"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="メニュー" id="jyr-fw-K4a">
                         <imageReference key="image" image="filemenu.and.cursorarrow" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="mailBox" destination="mi7-9f-NlZ" id="Qsm-hx-Rkd"/>
+                        <outlet property="mailLabel" destination="wsS-fC-ys8" id="9zY-Ww-Sj8"/>
+                        <outlet property="reviewBox" destination="c7u-c5-klc" id="CRa-cT-A74"/>
+                        <outlet property="reviewLabel" destination="bno-F0-6hI" id="RAi-SD-NcS"/>
+                        <outlet property="twitterBox" destination="gM1-dc-wma" id="LGv-hO-Mfw"/>
+                        <outlet property="twitterLabel" destination="xNI-mM-zyN" id="SUo-uh-ySD"/>
+                        <outlet property="versionBox" destination="xYC-EY-M3r" id="Y71-wf-dSm"/>
+                        <outlet property="versionLabel" destination="9vS-Qt-k0b" id="mOo-tF-mbE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcz-n4-W7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eIV-d3-t8h">
+                    <connections>
+                        <action selector="tapReviewButton:" destination="E9W-FX-kmu" id="Lts-7L-SII"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="V9W-yL-IME">
+                    <connections>
+                        <action selector="tapMailButton:" destination="E9W-FX-kmu" id="gzA-E2-2iG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dTT-JU-lPB">
+                    <connections>
+                        <action selector="tapTwitterButton:" destination="E9W-FX-kmu" id="IRu-Xg-9sP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="823" y="832"/>
+            <point key="canvasLocation" x="821.73913043478262" y="831.69642857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Twitter紹介" width="150" height="150"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <image name="お問い合わせ" width="100" height="100"/>
+        <image name="バージョン" width="100" height="100"/>
+        <image name="レビュー" width="100" height="100"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
