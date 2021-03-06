@@ -75,7 +75,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         startTranslationButton.backgroundColor = ColorList.accentColor
         
         // ローカルに保存されている翻訳履歴が空であれば呼ばれる
-        if  UserDefaults.standard.array(forKey: "returnTextArray")!.count == Count.zero {
+        if  UserDefaults.standard.array(forKey: "returnTextArray") == nil {
             
             // エラー回避の為に値を保存
             returnTextArray.append("ここに翻訳履歴が入ります。")
