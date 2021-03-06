@@ -53,7 +53,7 @@ class MenuViewController: UIViewController {
         twitterBox.backgroundColor = ColorList.baseColor
         versionBox.backgroundColor = ColorList.baseColor
         
-        // メニューの枠線の色
+        // メニューボックスの枠線の色
         reviewBox.layer.borderColor  = ColorList.itemColor.cgColor
         mailBox.layer.borderColor    = ColorList.itemColor.cgColor
         twitterBox.layer.borderColor = ColorList.itemColor.cgColor
@@ -64,6 +64,12 @@ class MenuViewController: UIViewController {
         mailBox.layer.borderWidth    = CGFloat(Count.one)
         twitterBox.layer.borderWidth = CGFloat(Count.one)
         versionBox.layer.borderWidth = CGFloat(Count.one)
+        
+        // メニューボックスの角丸
+        reviewBox.layer.cornerRadius  = CGFloat(CornerRadius.size)
+        mailBox.layer.cornerRadius    = CGFloat(CornerRadius.size)
+        twitterBox.layer.cornerRadius = CGFloat(CornerRadius.size)
+        versionBox.layer.cornerRadius = CGFloat(CornerRadius.size)
     }
     
     
