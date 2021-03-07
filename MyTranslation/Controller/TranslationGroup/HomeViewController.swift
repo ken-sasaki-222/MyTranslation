@@ -343,6 +343,8 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         }
     }
     
+    
+    // MARK: - 読み上げ機能
     // 読み上げボタンをタップすると呼ばれる
     @IBAction func tapSpeechButton(_ sender: Any) {
         
