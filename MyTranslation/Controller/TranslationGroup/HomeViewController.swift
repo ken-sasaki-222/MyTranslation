@@ -51,9 +51,6 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     // 翻訳履歴を保存する配列
     var returnTextArray: [String] = []
     
-    // 読み上げ機能で扱う
-    var talker = AVSpeechSynthesizer()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -363,9 +360,13 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             
             // アラートの表示
             present(alert, animated: true, completion: nil)
+        } else {
+            
+            // SpeechModelへ値を渡して通信
+            let speechModel = SpeechModel(text: afterTextView.text)
+                speechModel.startSpeech()
         }
     }
-    
     
     
     // MARK: - クリアアクション
