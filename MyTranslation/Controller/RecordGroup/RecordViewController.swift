@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 // 履歴ページを扱うクラス
 class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
