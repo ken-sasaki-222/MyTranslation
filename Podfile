@@ -9,6 +9,8 @@ target 'MyTranslation' do
   pod 'IBMWatsonLanguageTranslatorV3', '~> 3.6.0'
   pod 'SwiftyJSON'
   pod 'EMAlertController'
+  pod 'Firebase/MLNaturalLanguage', '6.25.0'
+  pod 'Firebase/MLNLLanguageID', '6.25.0'
 
   target 'MyTranslationTests' do
     inherit! :search_paths

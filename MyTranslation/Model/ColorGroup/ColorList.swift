@@ -17,8 +17,11 @@ class ColorList {
     // メインカラー（Textviewなど）
     static var mainColor      = UIColor.systemBackground
     
-    // アクセントカラー（翻訳ボタンなど）
-    static var accentColor    = UIColor.systemGreen
+    // アクセントカラー1（翻訳ボタンなど）
+    static var accentGreen    = UIColor.systemGreen
+    
+    // アクセントカラー2（読み上げボタンなど）
+    static var accentIndigo   = UIColor.systemIndigo
     
     // アイテムカラー（文字など）
     static var itemColor      = UIColor.label

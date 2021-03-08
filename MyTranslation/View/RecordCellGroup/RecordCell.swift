@@ -19,9 +19,14 @@ class RecordCell: UITableViewCell {
     // 履歴件数を表示するラベル
     @IBOutlet weak var recordCountLabel: UILabel!
     
+    // 履歴テキストを読み上げるボタン
+    @IBOutlet weak var recordSpeechButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        // ボタンの背景色
+        recordSpeechButton.tintColor = ColorList.accentIndigo
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +34,4 @@ class RecordCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

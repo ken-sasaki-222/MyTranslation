@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Firebase
 
 // 履歴ページを扱うクラス
-class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DoneCatchReturnLanguageCode {
     
     
     // MARK: - プロパティ
@@ -17,6 +18,9 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // ローカルに保存した翻訳結果を取得する値
     var recordValue: [String] = []
+    
+    // 言語判別で扱うインスタンス
+    let languageId = NaturalLanguage.naturalLanguage().languageIdentification()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +80,34 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // 空のセルを削除
         recordTableView.tableFooterView = UIView(frame: .zero)
         
+        // indexPath.rowを定義しaddTargetで渡してタップアクションを呼ぶ
+        cell.recordSpeechButton.tag = indexPath.row
+        cell.recordSpeechButton.addTarget(self, action: #selector(tapRecordSpeechButton(_:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    
+    // MARK: - 履歴読み上げ機能
+    // 音量アイコンをタップすると呼ばれる
+    @objc func tapRecordSpeechButton(_ sender: UIButton) {
+        
+        // indexPath.rowを受け取る
+        let speechButtonID = sender.tag
+        
+        // ReturnLanguageCodeModelへ値を渡して通信
+        let returnLanguageCodeModel = ReturnLanguageCodeModel(id: speechButtonID, text: recordValue[speechButtonID])
+            returnLanguageCodeModel.startIdentifyLanguage()
+        
+        // デリゲートを委託
+        returnLanguageCodeModel.doneCatchReturnLanguageCode = self
+    }
+    
+    // 言語コードを受け取ってSpeechModelへ値を渡す
+    func doneCatchReturnLanguageCode(cellNum: Int, languageCode: String) {
+        
+        // SpeechModelへ値を渡して通信
+        let speechModel = SpeechModel(text: recordValue[cellNum])
+            speechModel.startSpeech(code: languageCode)
     }
 }

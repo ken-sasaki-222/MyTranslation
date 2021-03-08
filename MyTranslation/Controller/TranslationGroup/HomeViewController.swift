@@ -7,10 +7,11 @@
 
 import UIKit
 import EMAlertController
+import AVFoundation
 
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource {
+class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource, DoneCatchReturnLanguageCode {
     
     
     // MARK: - プロパティ
@@ -22,6 +23,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     
     // 翻訳を開始するボタン
     @IBOutlet weak var startTranslationButton: UIButton!
+    
+    // テキスト読み上げを開始するボタン
+    @IBOutlet weak var speeshButton: UIButton!
     
     // 言語を入力する（原文）
     @IBOutlet weak var beforLanguageText: UITextField!
@@ -58,6 +62,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
         afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
         startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.size)
+        speeshButton.layer.cornerRadius           = CGFloat(CornerRadius.size)
         
         // パーツの配色設定（ベースカラー）
         view.backgroundColor              = ColorList.baseColor
@@ -72,7 +77,8 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         freshButton.tintColor = ColorList.itemColor
         
         // パーツの配色設定（アクセントカラー）
-        startTranslationButton.backgroundColor = ColorList.accentColor
+        startTranslationButton.backgroundColor = ColorList.accentGreen
+        speeshButton.backgroundColor           = ColorList.accentIndigo
         
         // ローカルに保存されている翻訳履歴が空であれば呼ばれる
         if  UserDefaults.standard.array(forKey: "returnTextArray") == nil {
@@ -321,19 +327,58 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         } else {
             
             // 配列の最後の要素を削除して
-            returnTextArray.removeLast()
+            var array = UserDefaults.standard.array(forKey: "returnTextArray")
+                array?.removeLast()
             
             // 配列の頭に値を保存
-            returnTextArray.insert(returnText, at: Count.zero)
+            array!.insert(returnText, at: Count.zero)
             
             // ローカルに値を保存
-            UserDefaults.standard.set(returnTextArray, forKey: "returnTextArray")
+            UserDefaults.standard.set(array, forKey: "returnTextArray")
         }
             
         // 翻訳結果をViewに反映
         DispatchQueue.main.async {
             self.afterTextView.text = returnText
         }
+    }
+    
+    
+    // MARK: - 読み上げ機能
+    // 読み上げボタンをタップすると呼ばれる
+    @IBAction func tapSpeechButton(_ sender: Any) {
+        
+        // 原文がnilの場合はアラートを表示
+        if afterTextView.text == "" {
+            
+            // アラートのインスタンス
+            let alert = EMAlertController(icon   : UIImage(named: "キャンセル"),
+                                          title  : "読み上げできません",
+                                          message: "翻訳後に再度タップして下さい")
+            
+            // アラートのアクションを設定しアラートを追加
+            let doneAction = EMAlertAction(title: "やり直す", style: .normal)
+            alert.addAction(doneAction)
+            
+            // アラートの表示
+            present(alert, animated: true, completion: nil)
+        } else {
+            
+            // ReturnLanguageCodeModelへ値を渡して通信
+            let returnLanguageCodeModel = ReturnLanguageCodeModel(id: Count.zero, text: afterTextView.text)
+                returnLanguageCodeModel.startIdentifyLanguage()
+            
+            // デリゲートを委託
+            returnLanguageCodeModel.doneCatchReturnLanguageCode = self
+        }
+    }
+    
+    // 言語コードを受け取ってSpeechModelへ値を渡す
+    func doneCatchReturnLanguageCode(cellNum: Int, languageCode: String) {
+        
+        // SpeechModelへ値を渡して通信
+        let speechModel = SpeechModel(text: afterTextView.text)
+            speechModel.startSpeech(code: languageCode)
     }
     
     
