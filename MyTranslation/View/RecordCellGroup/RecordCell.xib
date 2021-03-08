@@ -46,9 +46,6 @@
                         <state key="normal">
                             <imageReference key="image" image="speaker.wave.2" catalog="system" symbolScale="large"/>
                         </state>
-                        <connections>
-                            <action selector="tapRecordSpeechButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2lS-Vo-JiJ"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>

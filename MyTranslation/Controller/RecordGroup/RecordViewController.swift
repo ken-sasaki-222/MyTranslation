@@ -76,6 +76,23 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // 空のセルを削除
         recordTableView.tableFooterView = UIView(frame: .zero)
         
+        // indexPath.rowを定義しaddTargetで渡してタップアクションを呼ぶ
+        cell.recordSpeechButton.tag = indexPath.row
+        cell.recordSpeechButton.addTarget(self, action: #selector(tapRecordSpeechButton(_:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    
+    // MARK: - 履歴読み上げ機能
+    // 音量アイコンをタップすると呼ばれる
+    @objc func tapRecordSpeechButton(_ sender: UIButton) {
+        
+        // indexPath.rowを受け取る
+        let speechButtonID = sender.tag
+        
+        // SpeechModelへ値を渡して通信
+        let speechModel = SpeechModel(text: recordValue[speechButtonID])
+            speechModel.startSpeech()
     }
 }

@@ -34,12 +34,4 @@ class RecordCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
-    // MARK: - 履歴読み上げ機能
-    // 音量アイコンをタップすると呼ばれる
-    @IBAction func tapRecordSpeechButton(_ sender: Any) {
-        print("履歴読み上げ")
-    }
-    
 }
