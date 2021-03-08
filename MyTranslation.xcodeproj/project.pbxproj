@@ -29,6 +29,7 @@
 		456891D425EDFE6900DA9582 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891D325EDFE6900DA9582 /* Translation.swift */; };
 		456891D925EE012A00DA9582 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456891D825EE012A00DA9582 /* Count.swift */; };
 		45C2A8A725F5EAFB007B9608 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45C2A8A625F5EAFA007B9608 /* GoogleService-Info.plist */; };
+		45C2A8AD25F5F091007B9608 /* ReturnLanguageCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C2A8AC25F5F091007B9608 /* ReturnLanguageCodeModel.swift */; };
 		A98203F5B1D65A316B63CEF7 /* Pods_MyTranslationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47E42E161671DE20D27718A /* Pods_MyTranslationTests.framework */; };
 		B70E9256ED3E6FDA7E38F6A5 /* Pods_MyTranslation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7AD437A591B7610DC12D4B /* Pods_MyTranslation.framework */; };
 		F0FB4496F64DFCDDCF0BF866 /* Pods_MyTranslation_MyTranslationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3641C32E10EABAC9332F54 /* Pods_MyTranslation_MyTranslationUITests.framework */; };
@@ -82,6 +83,7 @@
 		456891D325EDFE6900DA9582 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		456891D825EE012A00DA9582 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 		45C2A8A625F5EAFA007B9608 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45C2A8AC25F5F091007B9608 /* ReturnLanguageCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnLanguageCodeModel.swift; sourceTree = "<group>"; };
 		51548372E88A16ABC9C3241D /* Pods-MyTranslationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslationTests.release.xcconfig"; path = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B8DF68BFE055E6F782F898 /* Pods-MyTranslationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslationTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTranslationTests/Pods-MyTranslationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A95163D863C4252E9F8F8B0E /* Pods-MyTranslation-MyTranslationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyTranslation-MyTranslationUITests/Pods-MyTranslation-MyTranslationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		456891B225ED34F900DA9582 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45C2A8AB25F5F041007B9608 /* SpeechFunctionGroup */,
 				456891CD25EDD87400DA9582 /* TranslationGroup */,
 				454C353D25EFB424005174E1 /* ColorGroup */,
 				456891C625EDD02B00DA9582 /* IntegerGroup */,
@@ -317,9 +320,17 @@
 			children = (
 				456891CE25EDDBE500DA9582 /* TranslationModel.swift */,
 				456891D325EDFE6900DA9582 /* Translation.swift */,
-				4504438525F47A30006B4490 /* SpeechModel.swift */,
 			);
 			path = TranslationGroup;
+			sourceTree = "<group>";
+		};
+		45C2A8AB25F5F041007B9608 /* SpeechFunctionGroup */ = {
+			isa = PBXGroup;
+			children = (
+				45C2A8AC25F5F091007B9608 /* ReturnLanguageCodeModel.swift */,
+				4504438525F47A30006B4490 /* SpeechModel.swift */,
+			);
+			path = SpeechFunctionGroup;
 			sourceTree = "<group>";
 		};
 		D3AF66D6491EC4E4BF4E90CB /* Frameworks */ = {
@@ -578,6 +589,7 @@
 				452145BE25F21F6400F7FAE1 /* MenuViewController.swift in Sources */,
 				454C353F25EFB44D005174E1 /* ColorList.swift in Sources */,
 				454C354925EFB4E9005174E1 /* UIColor+HexColor.swift in Sources */,
+				45C2A8AD25F5F091007B9608 /* ReturnLanguageCodeModel.swift in Sources */,
 				456891D425EDFE6900DA9582 /* Translation.swift in Sources */,
 				4504438625F47A30006B4490 /* SpeechModel.swift in Sources */,
 				456891B725ED354200DA9582 /* ApiKey.swift in Sources */,

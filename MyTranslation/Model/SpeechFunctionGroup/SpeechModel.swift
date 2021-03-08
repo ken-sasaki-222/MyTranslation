@@ -27,13 +27,13 @@ class SpeechModel {
     
     
     // MARK: - テキスト読み上げを開始する
-    func startSpeech() {
+    func startSpeech(code: String) {
         
         // 話す内容をセット
         let utterance = AVSpeechUtterance(string: speechText)
         
         // 言語を設定
-        utterance.voice = AVSpeechSynthesisVoice(language: "en")
+        utterance.voice = AVSpeechSynthesisVoice(language: code)
         
         // 実行
         self.talker.speak(utterance)

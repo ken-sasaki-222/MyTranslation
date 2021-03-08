@@ -11,7 +11,7 @@ import AVFoundation
 
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource {
+class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource, DoneCatchReturnLanguageCode {
     
     
     // MARK: - プロパティ
@@ -364,10 +364,21 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             present(alert, animated: true, completion: nil)
         } else {
             
-            // SpeechModelへ値を渡して通信
-            let speechModel = SpeechModel(text: afterTextView.text)
-                speechModel.startSpeech()
+            // ReturnLanguageCodeModelへ値を渡して通信
+            let returnLanguageCodeModel = ReturnLanguageCodeModel(id: Count.zero, text: afterTextView.text)
+                returnLanguageCodeModel.startIdentifyLanguage()
+            
+            // デリゲートを委託
+            returnLanguageCodeModel.doneCatchReturnLanguageCode = self
         }
+    }
+    
+    // 言語コードを受け取ってSpeechModelへ値を渡す
+    func doneCatchReturnLanguageCode(cellNum: Int, languageCode: String) {
+        
+        // SpeechModelへ値を渡して通信
+        let speechModel = SpeechModel(text: afterTextView.text)
+            speechModel.startSpeech(code: languageCode)
     }
     
     
