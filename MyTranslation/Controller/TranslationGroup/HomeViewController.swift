@@ -43,7 +43,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     @IBOutlet weak var freshButton: UIButton!
     
     // ピッカーに表示する言語配列
-    let languageArray = ["言語を選択", "日本語", "英語", "韓国語", "中国語"]
+    let languageArray = ["言語を選択", "日本語", "英語"]
     
     // 原文-訳文を保存してModelへ渡す
     var language: String?
@@ -227,65 +227,11 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
                 language = "en-ja"
                 translationModel.startTranslation(language: language!)
                 
-            // 原文が英語で訳文が韓国語の場合
-            case beforLanguageText!.text == "英語" && afterLanguageText!.text == "韓国語":
-                language = "en-ko"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が英語で訳文が中国語の場合
-            case beforLanguageText!.text == "英語" && afterLanguageText!.text == "中国語":
-                language = "en-zh"
-                translationModel.startTranslation(language: language!)
-                
-                
-            // MARK: - 原文韓国語
-            // 原文が韓国語で訳文が日本語の場合
-            case beforLanguageText!.text == "韓国語" && afterLanguageText!.text == "日本語":
-                language = "ko-ja"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が韓国語で訳文が英語の場合
-            case beforLanguageText!.text == "韓国語" && afterLanguageText!.text == "英語":
-                language = "ko-en"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が韓国語で訳文が中国語の場合
-            case beforLanguageText!.text == "韓国語" && afterLanguageText!.text == "中国語":
-                language = "ko-zh"
-                translationModel.startTranslation(language: language!)
-                
-                
-            // MARK: - 原文中国語
-            // 原文が中国語で訳文が日本語の場合
-            case beforLanguageText!.text == "中国語" && afterLanguageText!.text == "日本語":
-                language = "zh-ja"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が中国語で訳文が英語の場合
-            case beforLanguageText!.text == "中国語" && afterLanguageText!.text == "英語":
-                language = "zh-en"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が中国語で訳文が韓国語の場合
-            case beforLanguageText!.text == "中国語" && afterLanguageText!.text == "韓国語":
-                language = "zh-ko"
-                translationModel.startTranslation(language: language!)
-                
                 
             // MARK: - 原文日本語
             // 原文が日本語で訳文が英語の場合
             case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "英語":
                 language = "ja-en"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が日本語で訳文が韓国語の場合
-            case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "韓国語":
-                language = "ja-ko"
-                translationModel.startTranslation(language: language!)
-                
-            // 原文が日本語で訳文が中国語の場合
-            case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "中国語":
-                language = "ja-zh"
                 translationModel.startTranslation(language: language!)
             default:
                 // アラートのインスタンス
