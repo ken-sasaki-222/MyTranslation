@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 // 履歴ページを扱うクラス
 class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DoneCatchReturnLanguageCode {
@@ -18,9 +17,6 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // ローカルに保存した翻訳結果を取得する値
     var recordValue: [String] = []
-    
-    // 言語判別で扱うインスタンス
-    let languageId = NaturalLanguage.naturalLanguage().languageIdentification()
     
     override func viewDidLoad() {
         super.viewDidLoad()
