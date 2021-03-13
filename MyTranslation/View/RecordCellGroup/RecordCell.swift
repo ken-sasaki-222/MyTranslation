@@ -25,7 +25,7 @@ class RecordCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // ボタンの背景色
+        // ボタン色
         recordSpeechButton.tintColor = ColorList.accentIndigo
     }
 
