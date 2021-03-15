@@ -80,6 +80,20 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         startTranslationButton.backgroundColor = ColorList.accentGreen
         speeshButton.backgroundColor           = ColorList.accentIndigo
         
+        // キーボードに閉じるボタンを追加
+        let toolbar = UIToolbar()
+            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
+        
+        // ツールバーのボタンを作成
+        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneKeyboard))
+        
+        // ツールバーにボタンを反映
+        toolbar.setItems([doneButtonItem], animated: true)
+        
+        // ツールバーを反映
+        beforTextView.inputAccessoryView = toolbar
+        afterTextView.inputAccessoryView = toolbar
+        
         // ローカルに保存されている翻訳履歴が空であれば呼ばれる
         if  UserDefaults.standard.array(forKey: "returnTextArray") == nil {
             
@@ -150,7 +164,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         afterLanguageText.inputAccessoryView = toolbar
     }
     
-    // ツールバーのdoneボタンをタップした場合に呼ばれる
+    // Pickerのツールバーのdoneボタンをタップした場合に呼ばれる
     @objc func donePicker() {
         
         // Pickerを閉じる
@@ -347,6 +361,12 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         // Pickerを閉じる
         self.beforLanguageText.endEditing(true)
         self.afterLanguageText.endEditing(true)
+    }
+    
+    // キーボードのPickerのdoneがタップされると呼ばれる
+    @objc func doneKeyboard() {
+        // キーボードーを閉じる
+        self.view.endEditing(true)
     }
 }
 
