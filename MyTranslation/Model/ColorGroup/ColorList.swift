@@ -28,5 +28,4 @@ class ColorList {
     
     // タブ非選択カラー（タブバー）
     static var notSelectColor = UIColor.gray
-    
 }
