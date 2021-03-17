@@ -100,7 +100,7 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate 
         let toRecipients = ["nkeiisasa222@gmail.com"]
         
         // 件名と宛先の表示
-        mailViewController.setSubject("'HappyNews'へのご意見・ご要望")
+        mailViewController.setSubject("『俺の翻訳』へのお問い合わせ")
         mailViewController.setToRecipients(toRecipients)
         mailViewController.setMessageBody("▼アプリの不具合などの連絡はこちら \n \n \n \n ▼機能追加依頼はこちら \n \n \n \n ▼その他ご要望はこちら", isHTML: false)
         
