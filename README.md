@@ -90,6 +90,30 @@ XCTestは使わずMagic Podを用いてUIテスト行いました。
 
 これらの機能を今後の課題とします。
 
+## 機能紹介
+### 翻訳機能の紹介
+![ホーム画面動画](https://user-images.githubusercontent.com/61372276/111493476-edcb0100-8780-11eb-8735-69cdd6ff3182.gif)
+
+### 翻訳内容読み上げ機能(ホーム)の紹介
+![読み上げ動画1](https://user-images.githubusercontent.com/61372276/111493781-3a164100-8781-11eb-90a5-770f13eb345e.gif)
+
+※正常に読み上げています
+
+### 翻訳内容読み上げ機能(履歴)の紹介
+![読み上げ動画2](https://user-images.githubusercontent.com/61372276/111493924-5d40f080-8781-11eb-9af4-3c360094367c.gif)
+
+※正常に読み上げています
+
+### レビュー機能の紹介
+![レビュー](https://user-images.githubusercontent.com/61372276/111494049-7ba6ec00-8781-11eb-801d-f50bfa50db43.gif)
+
+### お問い合わせ機能の紹介
+
+
+### Twitter紹介機能の紹介
+![twitter紹介](https://user-images.githubusercontent.com/61372276/111494140-92e5d980-8781-11eb-8bd1-85f56343c3cc.gif)
+
+
 ## 開発者の連絡先
 このアプリに関するご連絡はアカウントをフォローしていただき[Twitter](https://twitter.com/ken_sasaki2)のダイレクトメッセージにて連絡。  
 もしくは、アプリ内のお問い合わせからご連絡下さい。  
