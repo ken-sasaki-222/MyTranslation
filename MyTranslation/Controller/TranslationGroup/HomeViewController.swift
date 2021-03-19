@@ -43,7 +43,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     @IBOutlet weak var freshButton: UIButton!
     
     // ピッカーに表示する言語配列
-    let languageArray = ["言語を選択", "日本語", "英語"]
+    let languageArray = ["言語を選択", "🇯🇵", "🇺🇸"]
     
     // 原文-訳文を保存してModelへ渡す
     var language: String?
