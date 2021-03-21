@@ -80,6 +80,7 @@ PODS:
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
   - Protobuf (3.14.0)
+  - SegementSlide (3.0.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -87,6 +88,7 @@ DEPENDENCIES:
   - Firebase/MLNaturalLanguage (= 6.25.0)
   - Firebase/MLNLLanguageID (= 6.25.0)
   - IBMWatsonLanguageTranslatorV3 (~> 3.6.0)
+  - SegementSlide (= 3.0.1)
   - SwiftyJSON
 
 SPEC REPOS:
@@ -110,6 +112,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - SegementSlide
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -132,8 +135,9 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
+  SegementSlide: 83b56ffb66b9c0edc4e4f2a74229309c62915db3
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: bd683ea3f800bf546eea4bb3f0fb40f4cd49428e
+PODFILE CHECKSUM: 70d2b48105dbba419c8b819ef68c16b20dca7963
 
 COCOAPODS: 1.10.1
