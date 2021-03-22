@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xse-1c-deT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="98j-5e-GoH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -12,7 +12,7 @@
         <!--ホーム-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,12 +103,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-770" y="832"/>
+            <point key="canvasLocation" x="783" y="-580"/>
         </scene>
         <!--履歴-->
         <scene sceneID="C40-r1-7ht">
             <objects>
-                <viewController id="ro9-ag-nCn" customClass="RecordViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="recordVC" id="ro9-ag-nCn" customClass="RecordViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QjF-NI-gPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,32 +141,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYF-zz-fev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="831.69642857142856"/>
+            <point key="canvasLocation" x="783" y="100"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="x1W-4y-bJ8">
+        <!--Segement View Controller-->
+        <scene sceneID="ChU-9B-X3P">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Xse-1c-deT" customClass="TabBarController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EN8-3D-MCO">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CRM-12-YUv"/>
-                        <segue destination="ro9-ag-nCn" kind="relationship" relationship="viewControllers" id="thE-kN-byN"/>
-                        <segue destination="E9W-FX-kmu" kind="relationship" relationship="viewControllers" id="A7M-S7-XYD"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3eN-Ib-00D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="xD1-RB-Zc0" customClass="SegementViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZx-Pr-z1p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fA6-Rd-KoT"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E19-lZ-az5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fK-0v-z1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="77.678571428571431"/>
+            <point key="canvasLocation" x="-43" y="100"/>
         </scene>
         <!--メニュー-->
         <scene sceneID="CxL-nr-DeR">
             <objects>
-                <viewController id="E9W-FX-kmu" customClass="MenuViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuVC" id="E9W-FX-kmu" customClass="MenuViewController" customModule="MyTranslation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ww6-pw-vhc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +286,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="821.73913043478262" y="831.69642857142856"/>
+            <point key="canvasLocation" x="783" y="800"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ukp-5r-kOh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="98j-5e-GoH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CNT-BD-mxk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xD1-RB-Zc0" kind="relationship" relationship="rootViewController" id="PlR-0z-khP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ekl-ci-kcO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848" y="100"/>
         </scene>
     </scenes>
     <resources>

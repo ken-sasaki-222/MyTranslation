@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SegementSlide
 
 // 履歴ページを扱うクラス
-class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DoneCatchReturnLanguageCode {
+class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate {
     
     
     // MARK: - プロパティ
@@ -40,6 +41,10 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // TableViewの更新
         recordTableView.reloadData()
+    }
+    
+    @objc var scrollView: UIScrollView {
+        return recordTableView
     }
     
     

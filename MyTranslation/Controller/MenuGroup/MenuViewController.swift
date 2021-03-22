@@ -8,9 +8,10 @@
 import UIKit
 import StoreKit
 import MessageUI
+import SegementSlide
 
 // メニューページを扱うクラス
-class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate, SegementSlideContentScrollViewDelegate {
     
     
     // MARK: - プロパティ

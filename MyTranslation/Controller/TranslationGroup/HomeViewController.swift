@@ -8,10 +8,11 @@
 import UIKit
 import EMAlertController
 import AVFoundation
+import SegementSlide
 
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource, DoneCatchReturnLanguageCode {
+class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate {
     
     
     // MARK: - プロパティ
