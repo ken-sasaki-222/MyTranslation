@@ -60,17 +60,6 @@
                                             <action selector="tapclearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEJ-S3-bji"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjm-h6-lCw">
-                                        <rect key="frame" x="370" y="315" width="32" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.1176470588" green="0.56470588239999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="翻訳">
-                                            <imageReference key="image" image="checkmark" catalog="system" symbolScale="large"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tapStartTranslationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zB2-7m-SXn"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -138,7 +127,6 @@
                         <outlet property="beforeLanguage" destination="0oR-Qj-Hur" id="heo-XU-d4U"/>
                         <outlet property="freshButton" destination="WoL-tD-gfP" id="G3O-i7-z4N"/>
                         <outlet property="speeshButton" destination="gef-ey-Scf" id="n2a-ZL-Jft"/>
-                        <outlet property="startTranslationButton" destination="Sjm-h6-lCw" id="9A8-IB-Ihl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -351,7 +339,6 @@
         <image name="Twitter紹介" width="150" height="150"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="arrow.right.arrow.left" catalog="system" width="119" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="timer" catalog="system" width="128" height="121"/>

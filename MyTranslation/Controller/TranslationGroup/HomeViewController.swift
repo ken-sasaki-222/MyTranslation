@@ -22,9 +22,6 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
     // テキストビュー（訳文）
     @IBOutlet weak var afterTextView: UITextView!
     
-    // 翻訳を開始するボタン
-    @IBOutlet weak var startTranslationButton: UIButton!
-    
     // テキスト読み上げを開始するボタン
     @IBOutlet weak var speeshButton: UIButton!
     
@@ -69,22 +66,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
     
         // アイコンボタンの化粧（クリアボタン, 翻訳ボタン, 読み上げボタン）
         freshButton.tintColor            = UIColor(hex: "1e90ff")
-        startTranslationButton.tintColor = UIColor(hex: "1e90ff")
         speeshButton.tintColor           = UIColor(hex: "1e90ff")
-        
-        // キーボードに閉じるボタンを追加
-        let toolbar = UIToolbar()
-            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
-        
-        // ツールバーのボタンを作成
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneKeyboard))
-        
-        // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem], animated: true)
-        
-        // ツールバーを反映
-        beforTextView.inputAccessoryView = toolbar
-        afterTextView.inputAccessoryView = toolbar
         
         // ローカルに保存されている翻訳履歴が空であれば呼ばれる
         if  UserDefaults.standard.array(forKey: "returnTextArray") == nil {
@@ -96,6 +78,34 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
             // ローカルに保存
             UserDefaults.standard.set(returnTextArray, forKey: "returnTextArray")
         }
+        
+        // キーボードのツールバーを反映
+        createKeyboardButton()
+    }
+    
+    
+    // MARK: - キーボードにツールバーを追加
+    // "閉じる", "翻訳"ボタンをキーボードに追加
+    func createKeyboardButton() {
+        
+        // ツールバーを作成
+        let toolbar = UIToolbar()
+            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
+        
+        // 余白用アイテム
+        let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        // "閉じる"ボタンを作成
+        let doneButtonItem = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneKeyboard))
+        
+        // "翻訳実行"ボタンを作成
+        let actionButtonItem = UIBarButtonItem(title: "翻訳実行", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapStartTranslation))
+        
+        // ツールバーにボタンを反映
+        toolbar.setItems([doneButtonItem, flexibleItem, actionButtonItem], animated: true)
+        
+        // ツールバーを反映
+        beforTextView.inputAccessoryView = toolbar
     }
     
     
@@ -114,9 +124,12 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
     }
     
 
-    // MARK: - 翻訳開始ボタン
-    // 翻訳開始をタップすると呼ばれる
-    @IBAction func tapStartTranslationButton(_ sender: Any) {
+    // MARK: - 翻訳開始
+    // 翻訳実行をタップすると呼ばれる
+    @objc func tapStartTranslation() {
+        
+        // キーボードを閉じる
+        self.view.endEditing(true)
         
         // 原文がnilの場合はアラートを表示
         if beforTextView.text == "" {
@@ -261,13 +274,13 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
     // Viewタップ閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        // キーボードーを閉じる
+        // キーボードを閉じる
         self.view.endEditing(true)
     }
     
-    // キーボードのPickerのdoneがタップされると呼ばれる
+    // キーボードの"閉じる"ボタンがタップされると呼ばれる
     @objc func doneKeyboard() {
-        // キーボードーを閉じる
+        // キーボードを閉じる
         self.view.endEditing(true)
     }
 }
