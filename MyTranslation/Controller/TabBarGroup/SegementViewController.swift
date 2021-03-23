@@ -48,7 +48,7 @@ class SegementViewController: SegementSlideDefaultViewController {
     // MARK: - SegementSlideの設定
     // スライドのタイトルを決める
     override var titlesInSwitcher: [String] {
-        return ["翻訳ページ", "翻訳履歴 最新10件", "メニュー"]
+        return ["翻訳ページ", "履歴ページ", "メニュー"]
     }
     
     // スライドにControllerを返す
