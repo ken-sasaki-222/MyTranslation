@@ -32,10 +32,10 @@ class SegementViewController: SegementSlideDefaultViewController {
         
         // NavigationBarのタイトルとその色とフォント
         navigationItem.title = "俺の翻訳"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorList.itemColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19.0, weight: .semibold)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19.0, weight: .semibold)]
         
         // NavigationBarの色
-        self.navigationController?.navigationBar.barTintColor = ColorList.baseColor
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "1e90ff")
         
         // 一部NavigationBarがすりガラス？のような感じになるのでfalseで統一
         self.navigationController?.navigationBar.isTranslucent = false
@@ -48,7 +48,7 @@ class SegementViewController: SegementSlideDefaultViewController {
     // MARK: - SegementSlideの設定
     // スライドのタイトルを決める
     override var titlesInSwitcher: [String] {
-        return ["ホーム", "履歴", "メニュー"]
+        return ["翻訳ページ", "翻訳履歴 最新10件", "メニュー"]
     }
     
     // スライドにControllerを返す

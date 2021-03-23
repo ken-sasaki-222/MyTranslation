@@ -12,7 +12,7 @@ import SegementSlide
 
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate {
+class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate {
     
     
     // MARK: - プロパティ
@@ -60,15 +60,15 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         self.overrideUserInterfaceStyle = .light
         
         // テキストビュー & ボタンの角丸
-        beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
-        afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
+//        beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
+//        afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
         startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.size)
         speeshButton.layer.cornerRadius           = CGFloat(CornerRadius.size)
         
         // パーツの配色設定（ベースカラー）
-        view.backgroundColor              = ColorList.baseColor
-        beforLanguageText.backgroundColor = ColorList.baseColor
-        afterLanguageText.backgroundColor = ColorList.baseColor
+        view.backgroundColor              = UIColor(hex: "f4f8fa")
+//        beforLanguageText.backgroundColor = ColorList.mainColor
+//        afterLanguageText.backgroundColor = ColorList.mainColor
         
         // パーツの配色設定（メインカラー）
         beforTextView.backgroundColor = ColorList.mainColor
@@ -78,8 +78,8 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         freshButton.tintColor = ColorList.itemColor
         
         // パーツの配色設定（アクセントカラー）
-        startTranslationButton.backgroundColor = ColorList.accentGreen
-        speeshButton.backgroundColor           = ColorList.accentIndigo
+        //startTranslationButton.backgroundColor = ColorList.accentGreen
+        //speeshButton.backgroundColor           = ColorList.accentIndigo
         
         // キーボードに閉じるボタンを追加
         let toolbar = UIToolbar()
@@ -110,7 +110,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         createBeforLanguagePickerView()
         
         // 言語選択Pickerを呼び出す（訳文）
-        createAfterLanguagePickerView()
+//        createAfterLanguagePickerView()
     }
     
     
@@ -119,94 +119,94 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     func createBeforLanguagePickerView() {
         
         // デリゲートの委託とtagを設定
-        beforLanguagePicker.delegate   = self
-        beforLanguagePicker.dataSource = self
+//        beforLanguagePicker.delegate   = self
+//        beforLanguagePicker.dataSource = self
         beforLanguagePicker.tag        = Count.one
         
         // 入力のキーボードをPickerViewに
-        beforLanguageText.inputView = beforLanguagePicker
+//        beforLanguageText.inputView = beforLanguagePicker
         
         // ツールバーも作成
         let toolbar = UIToolbar()
             toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
         
         // ツールバーのボタンを作成
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+//        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
         
         // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem], animated: true)
+//        toolbar.setItems([doneButtonItem], animated: true)
         
         // ツールバーを反映
-        beforLanguageText.inputAccessoryView = toolbar
+//        beforLanguageText.inputAccessoryView = toolbar
     }
     
     // Pickerを作成する（訳文）
-    func createAfterLanguagePickerView() {
-        
-        // デリゲートの委託とtagに設定
-        afterLanguagePicker.delegate   = self
-        afterLanguagePicker.dataSource = self
-        afterLanguagePicker.tag        = Count.two
-        
-        // 入力のキーボードをPickerViewに
-        afterLanguageText.inputView = afterLanguagePicker
-        
-        // ツールバーも作成
-        let toolbar = UIToolbar()
-            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
-        
-        // ツールバーのボタンを作成
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
-        
-        // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem], animated: true)
-        
-        // ツールバーを反映
-        afterLanguageText.inputAccessoryView = toolbar
-    }
-    
-    // Pickerのツールバーのdoneボタンをタップした場合に呼ばれる
-    @objc func donePicker() {
-        
-        // Pickerを閉じる
-        beforLanguageText.endEditing(true)
-        afterLanguageText.endEditing(true)
-    }
-    
-    // Pickerの列の数
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return Count.one
-    }
-    
-    // Pickerの行数、リストの数
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        if pickerView.tag == Count.one {
-            return languageArray.count
-        } else {
-            return languageArray.count
-        }
-    }
-    
-    // Pickerに表示する文字列を設定
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        if pickerView.tag == Count.one {
-            return languageArray[row]
-        } else {
-            return languageArray[row]
-        }
-    }
-    
-    // Pickerを選択した場合の挙動を確認
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if pickerView.tag == Count.one {
-            beforLanguageText.text = languageArray[row]
-        } else {
-            afterLanguageText.text = languageArray[row]
-        }
-    }
+//    func createAfterLanguagePickerView() {
+//
+//        // デリゲートの委託とtagに設定
+//        afterLanguagePicker.delegate   = self
+//        afterLanguagePicker.dataSource = self
+//        afterLanguagePicker.tag        = Count.two
+//
+//        // 入力のキーボードをPickerViewに
+////        afterLanguageText.inputView = afterLanguagePicker
+//
+//        // ツールバーも作成
+//        let toolbar = UIToolbar()
+//            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
+//
+//        // ツールバーのボタンを作成
+//        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+//
+//        // ツールバーにボタンを反映
+//        toolbar.setItems([doneButtonItem], animated: true)
+//
+//        // ツールバーを反映
+////        afterLanguageText.inputAccessoryView = toolbar
+//    }
+//
+//    // Pickerのツールバーのdoneボタンをタップした場合に呼ばれる
+//    @objc func donePicker() {
+//
+//        // Pickerを閉じる
+////        beforLanguageText.endEditing(true)
+////        afterLanguageText.endEditing(true)
+//    }
+//
+//    // Pickerの列の数
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return Count.one
+//    }
+//
+//    // Pickerの行数、リストの数
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//
+//        if pickerView.tag == Count.one {
+//            return languageArray.count
+//        } else {
+//            return languageArray.count
+//        }
+//    }
+//
+//    // Pickerに表示する文字列を設定
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//
+//        if pickerView.tag == Count.one {
+//            return languageArray[row]
+//        } else {
+//            return languageArray[row]
+//        }
+//    }
+//
+//    // Pickerを選択した場合の挙動を確認
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//
+//        if pickerView.tag == Count.one {
+//            beforLanguageText.text = languageArray[row]
+//        } else {
+//            afterLanguageText.text = languageArray[row]
+//        }
+//    }
 
 
     // MARK: - 翻訳開始ボタン
