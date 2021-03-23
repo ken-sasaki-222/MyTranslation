@@ -54,6 +54,10 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
         beforTextView.backgroundColor = ColorList.mainColor
         afterTextView.backgroundColor = ColorList.mainColor
         
+        // 訳文テキストビューはキーボードを出現させない
+        afterTextView.isUserInteractionEnabled = true
+        afterTextView.isEditable = false
+        
         // 言語設定Labelの初期値
         beforeLanguage.text = "英語 🇬🇧"
         afterLanguage.text  = "日本語 🇯🇵"
