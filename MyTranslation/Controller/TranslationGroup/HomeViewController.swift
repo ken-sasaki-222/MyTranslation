@@ -102,11 +102,14 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
         // "閉じる"ボタンを作成
         let doneButtonItem = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneKeyboard))
         
-        // "翻訳実行"ボタンを作成
-        let actionButtonItem = UIBarButtonItem(title: "翻訳実行", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapStartTranslation))
+        // "クリア"ボタンを作成
+        let crearButtonItem = UIBarButtonItem(title: "クリア", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapCrearButtonItem))
         
-        // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem, flexibleItem, actionButtonItem], animated: true)
+        // "翻訳実行"ボタンを作成
+        let translationButtonItem = UIBarButtonItem(title: "翻訳実行", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapStartTranslation))
+        
+        // ツールバーにボタンを反映（閉じる, クリア, 翻訳実行）
+        toolbar.setItems([doneButtonItem, flexibleItem, crearButtonItem, flexibleItem, translationButtonItem], animated: true)
         
         // ツールバーを反映
         beforTextView.inputAccessoryView = toolbar
@@ -268,7 +271,12 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
     // MARK: - クリアアクション
     // クリアボタンをタップすると呼ばれる
     @IBAction func tapclearButton(_ sender: Any) {
-        
+        beforTextView.text = nil
+        afterTextView.text = nil
+    }
+    
+    // ツールバーのクリアボタンをタップすると呼ばれる
+    @objc func tapCrearButtonItem() {
         beforTextView.text = nil
         afterTextView.text = nil
     }
