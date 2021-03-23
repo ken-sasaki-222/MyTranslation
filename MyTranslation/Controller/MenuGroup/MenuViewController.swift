@@ -34,7 +34,7 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate,
     @IBOutlet weak var versionLabel: UILabel!
     
     // ラベルに表示するテキストの配列
-    var menuTextArray = ["レビュー", "お問い合わせ", "開発者", "Version 1.0"]
+    var menuTextArray = ["レビュー", "お問い合わせ", "開発者", "Version 2.0"]
     
     
     override func viewDidLoad() {
@@ -56,18 +56,6 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate,
         twitterBox.backgroundColor = ColorList.mainColor
         versionBox.backgroundColor = ColorList.mainColor
         
-        // メニューボックスの枠線の色
-        reviewBox.layer.borderColor  = ColorList.itemColor.cgColor
-        mailBox.layer.borderColor    = ColorList.itemColor.cgColor
-        twitterBox.layer.borderColor = ColorList.itemColor.cgColor
-        versionBox.layer.borderColor = ColorList.itemColor.cgColor
-        
-        // メニュー枠線の太さ
-        reviewBox.layer.borderWidth  = CGFloat(Count.one)
-        mailBox.layer.borderWidth    = CGFloat(Count.one)
-        twitterBox.layer.borderWidth = CGFloat(Count.one)
-        versionBox.layer.borderWidth = CGFloat(Count.one)
-        
         // メニューボックスの角丸
         reviewBox.layer.cornerRadius  = CGFloat(CornerRadius.size)
         mailBox.layer.cornerRadius    = CGFloat(CornerRadius.size)
@@ -79,7 +67,6 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate,
     // MARK: - メニュータップアクション
     // レビューボックスをタップすると呼ばれる
     @IBAction func tapReviewButton(_ sender: Any) {
-        
         // レビューを求めるアクションを表示
         SKStoreReviewController.requestReview()
     }
