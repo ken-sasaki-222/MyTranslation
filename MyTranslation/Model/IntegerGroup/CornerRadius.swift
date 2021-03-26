@@ -11,5 +11,5 @@ import Foundation
 class CornerRadius {
     
     // ベースのサイズとする
-    static var size = 12
+    static var size = 8
 }

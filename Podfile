@@ -11,6 +11,7 @@ target 'MyTranslation' do
   pod 'EMAlertController'
   pod 'Firebase/MLNaturalLanguage', '6.25.0'
   pod 'Firebase/MLNLLanguageID', '6.25.0'
+  pod 'SegementSlide', '3.0.1'
 
   target 'MyTranslationTests' do
     inherit! :search_paths

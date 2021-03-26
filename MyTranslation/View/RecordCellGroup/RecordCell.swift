@@ -26,7 +26,7 @@ class RecordCell: UITableViewCell {
         super.awakeFromNib()
         
         // ボタン色
-        recordSpeechButton.tintColor = ColorList.accentIndigo
+        recordSpeechButton.tintColor = UIColor(hex: "1e90ff")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -8,10 +8,11 @@
 import UIKit
 import EMAlertController
 import AVFoundation
+import SegementSlide
 
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewDelegate, UIPickerViewDataSource, DoneCatchReturnLanguageCode {
+class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate, AVSpeechSynthesizerDelegate {
     
     
     // MARK: - プロパティ
@@ -21,35 +22,26 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     // テキストビュー（訳文）
     @IBOutlet weak var afterTextView: UITextView!
     
-    // 翻訳を開始するボタン
-    @IBOutlet weak var startTranslationButton: UIButton!
-    
     // テキスト読み上げを開始するボタン
     @IBOutlet weak var speeshButton: UIButton!
     
-    // 言語を入力する（原文）
-    @IBOutlet weak var beforLanguageText: UITextField!
+    // 言語設定Label（原文）
+    @IBOutlet weak var beforeLanguage: UILabel!
     
-    // 言語を入力する（訳文）
-    @IBOutlet weak var afterLanguageText: UITextField!
-    
-    // 言語を選択するピッカー（原文）
-    var beforLanguagePicker = UIPickerView()
-    
-    // 言語を選択するピッカー（訳文）
-    var afterLanguagePicker = UIPickerView()
+    // 言語設定Label（訳文）
+    @IBOutlet weak var afterLanguage: UILabel!
     
     // 原文-訳文をクリアするボタン
     @IBOutlet weak var freshButton: UIButton!
-    
-    // ピッカーに表示する言語配列
-    let languageArray = ["言語を選択", "🇯🇵", "🇺🇸"]
     
     // 原文-訳文を保存してModelへ渡す
     var language: String?
     
     // 翻訳履歴を保存する配列
     var returnTextArray: [String] = []
+    
+    // 読み上げ機能で扱う
+    var talker = AVSpeechSynthesizer()
     
     
     override func viewDidLoad() {
@@ -58,41 +50,30 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         // ダークモード適用を回避
         self.overrideUserInterfaceStyle = .light
         
-        // テキストビュー & ボタンの角丸
-        beforTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
-        afterTextView.layer.cornerRadius          = CGFloat(CornerRadius.size)
-        startTranslationButton.layer.cornerRadius = CGFloat(CornerRadius.size)
-        speeshButton.layer.cornerRadius           = CGFloat(CornerRadius.size)
+        // viewの背景色
+        view.backgroundColor = UIColor(hex: "f4f8fa")
         
-        // パーツの配色設定（ベースカラー）
-        view.backgroundColor              = ColorList.baseColor
-        beforLanguageText.backgroundColor = ColorList.baseColor
-        afterLanguageText.backgroundColor = ColorList.baseColor
-        
-        // パーツの配色設定（メインカラー）
+        // テキストビューの化粧
         beforTextView.backgroundColor = ColorList.mainColor
         afterTextView.backgroundColor = ColorList.mainColor
         
-        // パーツの配色設定（アイテムカラー）
-        freshButton.tintColor = ColorList.itemColor
+        // 訳文テキストビューはキーボードを出現させない
+        afterTextView.isUserInteractionEnabled = true
+        afterTextView.isEditable = false
         
-        // パーツの配色設定（アクセントカラー）
-        startTranslationButton.backgroundColor = ColorList.accentGreen
-        speeshButton.backgroundColor           = ColorList.accentIndigo
-        
-        // キーボードに閉じるボタンを追加
-        let toolbar = UIToolbar()
-            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
-        
-        // ツールバーのボタンを作成
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneKeyboard))
-        
-        // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem], animated: true)
-        
-        // ツールバーを反映
-        beforTextView.inputAccessoryView = toolbar
-        afterTextView.inputAccessoryView = toolbar
+        // 言語設定Labelの初期値
+        beforeLanguage.text = "英語 🇬🇧"
+        afterLanguage.text  = "日本語 🇯🇵"
+    
+        // 言語設定Labelの化粧
+        afterLanguage.layer.cornerRadius  = CGFloat(CornerRadius.size)
+        afterLanguage.clipsToBounds       = true
+        beforeLanguage.layer.cornerRadius = CGFloat(CornerRadius.size)
+        beforeLanguage.clipsToBounds      = true
+    
+        // アイコンボタンの化粧（クリアボタン, 翻訳ボタン, 読み上げボタン）
+        freshButton.tintColor            = UIColor(hex: "1e90ff")
+        speeshButton.tintColor           = UIColor(hex: "1e90ff")
         
         // ローカルに保存されている翻訳履歴が空であれば呼ばれる
         if  UserDefaults.standard.array(forKey: "returnTextArray") == nil {
@@ -105,112 +86,63 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             UserDefaults.standard.set(returnTextArray, forKey: "returnTextArray")
         }
         
-        // 言語選択Pickerを呼び出す（原文）
-        createBeforLanguagePickerView()
+        // キーボードのツールバーを反映
+        createKeyboardButton()
         
-        // 言語選択Pickerを呼び出す（訳文）
-        createAfterLanguagePickerView()
+        // デリゲートの委託
+        self.talker.delegate = self
     }
     
     
-    // MARK: - 言語選択処理
-    // Pickerを作成する（原文）
-    func createBeforLanguagePickerView() {
+    // MARK: - キーボードにツールバーを追加
+    // "閉じる", "翻訳"ボタンをキーボードに追加
+    func createKeyboardButton() {
         
-        // デリゲートの委託とtagを設定
-        beforLanguagePicker.delegate   = self
-        beforLanguagePicker.dataSource = self
-        beforLanguagePicker.tag        = Count.one
-        
-        // 入力のキーボードをPickerViewに
-        beforLanguageText.inputView = beforLanguagePicker
-        
-        // ツールバーも作成
+        // ツールバーを作成
         let toolbar = UIToolbar()
             toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
         
-        // ツールバーのボタンを作成
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+        // 余白用アイテム
+        let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
-        // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem], animated: true)
+        // "閉じる"ボタンを作成
+        let doneButtonItem = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneKeyboard))
         
-        // ツールバーを反映
-        beforLanguageText.inputAccessoryView = toolbar
-    }
-    
-    // Pickerを作成する（訳文）
-    func createAfterLanguagePickerView() {
+        // "クリア"ボタンを作成
+        let crearButtonItem = UIBarButtonItem(title: "クリア", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapCrearButtonItem))
         
-        // デリゲートの委託とtagに設定
-        afterLanguagePicker.delegate   = self
-        afterLanguagePicker.dataSource = self
-        afterLanguagePicker.tag        = Count.two
+        // "翻訳実行"ボタンを作成
+        let translationButtonItem = UIBarButtonItem(title: "翻訳実行", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapStartTranslation))
         
-        // 入力のキーボードをPickerViewに
-        afterLanguageText.inputView = afterLanguagePicker
-        
-        // ツールバーも作成
-        let toolbar = UIToolbar()
-            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
-        
-        // ツールバーのボタンを作成
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
-        
-        // ツールバーにボタンを反映
-        toolbar.setItems([doneButtonItem], animated: true)
+        // ツールバーにボタンを反映（閉じる, クリア, 翻訳実行）
+        toolbar.setItems([doneButtonItem, flexibleItem, crearButtonItem, flexibleItem, translationButtonItem], animated: true)
         
         // ツールバーを反映
-        afterLanguageText.inputAccessoryView = toolbar
+        beforTextView.inputAccessoryView = toolbar
     }
     
-    // Pickerのツールバーのdoneボタンをタップした場合に呼ばれる
-    @objc func donePicker() {
+    
+    // MARK: - 翻訳言語変更
+    // 中央矢印ボタンをタップすると呼ばれる
+    @IBAction func changeLanguageButton(_ sender: Any) {
         
-        // Pickerを閉じる
-        beforLanguageText.endEditing(true)
-        afterLanguageText.endEditing(true)
-    }
-    
-    // Pickerの列の数
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return Count.one
-    }
-    
-    // Pickerの行数、リストの数
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        if pickerView.tag == Count.one {
-            return languageArray.count
+        // 原文と訳文の言語を変換する
+        if beforeLanguage.text == "英語 🇬🇧" && afterLanguage.text == "日本語 🇯🇵" {
+            beforeLanguage.text = "日本語 🇯🇵"
+            afterLanguage.text  = "英語 🇬🇧"
         } else {
-            return languageArray.count
+            beforeLanguage.text = "英語 🇬🇧"
+            afterLanguage.text  = "日本語 🇯🇵"
         }
     }
     
-    // Pickerに表示する文字列を設定
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        if pickerView.tag == Count.one {
-            return languageArray[row]
-        } else {
-            return languageArray[row]
-        }
-    }
-    
-    // Pickerを選択した場合の挙動を確認
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if pickerView.tag == Count.one {
-            beforLanguageText.text = languageArray[row]
-        } else {
-            afterLanguageText.text = languageArray[row]
-        }
-    }
 
-
-    // MARK: - 翻訳開始ボタン
-    // 翻訳開始をタップすると呼ばれる
-    @IBAction func tapStartTranslationButton(_ sender: Any) {
+    // MARK: - 翻訳開始
+    // 翻訳実行をタップすると呼ばれる
+    @objc func tapStartTranslation() {
+        
+        // キーボードを閉じる
+        self.view.endEditing(true)
         
         // 原文がnilの場合はアラートを表示
         if beforTextView.text == "" {
@@ -237,14 +169,14 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             
             // MARK: - 原文英語
             // 原文が英語で訳文が日本語の場合
-            case beforLanguageText!.text == "英語" && afterLanguageText!.text == "日本語":
+            case beforeLanguage.text == "英語 🇬🇧" && afterLanguage.text == "日本語 🇯🇵":
                 language = "en-ja"
                 translationModel.startTranslation(language: language!)
                 
                 
             // MARK: - 原文日本語
             // 原文が日本語で訳文が英語の場合
-            case beforLanguageText!.text == "日本語" && afterLanguageText!.text == "英語":
+            case beforeLanguage.text == "日本語 🇯🇵" && afterLanguage.text == "英語 🇬🇧":
                 language = "ja-en"
                 translationModel.startTranslation(language: language!)
             default:
@@ -324,6 +256,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
             present(alert, animated: true, completion: nil)
         } else {
             
+            // 読み上げボタンのタップを拒否(連続タップを防止)
+            speeshButton.isEnabled = false
+            
             // ReturnLanguageCodeModelへ値を渡して通信
             let returnLanguageCodeModel = ReturnLanguageCodeModel(id: Count.zero, text: afterTextView.text)
                 returnLanguageCodeModel.startIdentifyLanguage()
@@ -333,19 +268,37 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
         }
     }
     
-    // 言語コードを受け取ってSpeechModelへ値を渡す
+    // 言語コードを受け取ってテキストを読み上げ
     func doneCatchReturnLanguageCode(cellNum: Int, languageCode: String) {
         
-        // SpeechModelへ値を渡して通信
-        let speechModel = SpeechModel(text: afterTextView.text)
-            speechModel.startSpeech(code: languageCode)
+        // 話す内容をセット
+        let utterance = AVSpeechUtterance(string: afterTextView.text)
+        
+        // 言語を設定
+        utterance.voice = AVSpeechSynthesisVoice(language: languageCode)
+        
+        // 実行
+        self.talker.speak(utterance)
+    }
+
+    // 読み上げ終了時に呼ばれる
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        print("読み上げ終了")
+        
+        // 読み上げボタンのタップ許可
+        speeshButton.isEnabled = true
     }
     
     
     // MARK: - クリアアクション
     // クリアボタンをタップすると呼ばれる
     @IBAction func tapclearButton(_ sender: Any) {
-        
+        beforTextView.text = nil
+        afterTextView.text = nil
+    }
+    
+    // ツールバーのクリアボタンをタップすると呼ばれる
+    @objc func tapCrearButtonItem() {
         beforTextView.text = nil
         afterTextView.text = nil
     }
@@ -355,17 +308,13 @@ class HomeViewController: UIViewController, ReturnTranslationText, UIPickerViewD
     // Viewタップ閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        // キーボードーを閉じる
+        // キーボードを閉じる
         self.view.endEditing(true)
-        
-        // Pickerを閉じる
-        self.beforLanguageText.endEditing(true)
-        self.afterLanguageText.endEditing(true)
     }
     
-    // キーボードのPickerのdoneがタップされると呼ばれる
+    // キーボードの"閉じる"ボタンがタップされると呼ばれる
     @objc func doneKeyboard() {
-        // キーボードーを閉じる
+        // キーボードを閉じる
         self.view.endEditing(true)
     }
 }
