@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4504438625F47A30006B4490 /* SpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504438525F47A30006B4490 /* SpeechModel.swift */; };
 		451874F125F0903B005A9664 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451874F025F0903B005A9664 /* RecordViewController.swift */; };
 		452145BE25F21F6400F7FAE1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452145BD25F21F6400F7FAE1 /* MenuViewController.swift */; };
 		4527D30C2608C5AD00D73B04 /* SegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527D30B2608C5AD00D73B04 /* SegementViewController.swift */; };
@@ -54,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		0E3641C32E10EABAC9332F54 /* Pods_MyTranslation_MyTranslationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTranslation_MyTranslationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4504438525F47A30006B4490 /* SpeechModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechModel.swift; sourceTree = "<group>"; };
 		451874F025F0903B005A9664 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		452145BD25F21F6400F7FAE1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4527D30B2608C5AD00D73B04 /* SegementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegementViewController.swift; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				45C2A8AC25F5F091007B9608 /* ReturnLanguageCodeModel.swift */,
-				4504438525F47A30006B4490 /* SpeechModel.swift */,
 			);
 			path = SpeechFunctionGroup;
 			sourceTree = "<group>";
@@ -592,7 +589,6 @@
 				454C354925EFB4E9005174E1 /* UIColor+HexColor.swift in Sources */,
 				45C2A8AD25F5F091007B9608 /* ReturnLanguageCodeModel.swift in Sources */,
 				456891D425EDFE6900DA9582 /* Translation.swift in Sources */,
-				4504438625F47A30006B4490 /* SpeechModel.swift in Sources */,
 				456891B725ED354200DA9582 /* ApiKey.swift in Sources */,
 				456891D925EE012A00DA9582 /* Count.swift in Sources */,
 				456891CF25EDDBE500DA9582 /* TranslationModel.swift in Sources */,
