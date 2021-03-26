@@ -12,7 +12,7 @@ import SegementSlide
 
 
 // テキスト入力による翻訳をおこなうクラス
-class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate {
+class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchReturnLanguageCode, SegementSlideContentScrollViewDelegate, AVSpeechSynthesizerDelegate {
     
     
     // MARK: - プロパティ
@@ -39,6 +39,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
     
     // 翻訳履歴を保存する配列
     var returnTextArray: [String] = []
+    
+    // 読み上げ機能で扱う
+    var talker = AVSpeechSynthesizer()
     
     
     override func viewDidLoad() {
@@ -85,6 +88,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
         
         // キーボードのツールバーを反映
         createKeyboardButton()
+        
+        // デリゲートの委託
+        self.talker.delegate = self
     }
     
     
@@ -250,6 +256,9 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
             present(alert, animated: true, completion: nil)
         } else {
             
+            // 読み上げボタンのタップを拒否(連続タップを防止)
+            speeshButton.isEnabled = false
+            
             // ReturnLanguageCodeModelへ値を渡して通信
             let returnLanguageCodeModel = ReturnLanguageCodeModel(id: Count.zero, text: afterTextView.text)
                 returnLanguageCodeModel.startIdentifyLanguage()
@@ -259,12 +268,25 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
         }
     }
     
-    // 言語コードを受け取ってSpeechModelへ値を渡す
+    // 言語コードを受け取ってテキストを読み上げ
     func doneCatchReturnLanguageCode(cellNum: Int, languageCode: String) {
         
-        // SpeechModelへ値を渡して通信
-        let speechModel = SpeechModel(text: afterTextView.text)
-            speechModel.startSpeech(code: languageCode)
+        // 話す内容をセット
+        let utterance = AVSpeechUtterance(string: afterTextView.text)
+        
+        // 言語を設定
+        utterance.voice = AVSpeechSynthesisVoice(language: languageCode)
+        
+        // 実行
+        self.talker.speak(utterance)
+    }
+
+    // 読み上げ終了時に呼ばれる
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        print("読み上げ終了")
+        
+        // 読み上げボタンのタップ許可
+        speeshButton.isEnabled = true
     }
     
     
