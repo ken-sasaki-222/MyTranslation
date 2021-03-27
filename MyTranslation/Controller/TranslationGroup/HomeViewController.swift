@@ -51,7 +51,7 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
         self.overrideUserInterfaceStyle = .light
         
         // viewの背景色
-        view.backgroundColor = UIColor(hex: "f4f8fa")
+        view.backgroundColor = ColorList.backgroundColor
         
         // テキストビューの化粧
         beforTextView.backgroundColor = ColorList.mainColor
@@ -72,8 +72,8 @@ class HomeViewController: UIViewController, ReturnTranslationText, DoneCatchRetu
         beforeLanguage.clipsToBounds      = true
     
         // アイコンボタンの化粧（クリアボタン, 翻訳ボタン, 読み上げボタン）
-        freshButton.tintColor            = UIColor(hex: "1e90ff")
-        speeshButton.tintColor           = UIColor(hex: "1e90ff")
+        freshButton.tintColor            = ColorList.accentColor
+        speeshButton.tintColor           = ColorList.accentColor
         
         // ローカルに保存されている翻訳履歴が空であれば呼ばれる
         if  UserDefaults.standard.array(forKey: "returnTextArray") == nil {

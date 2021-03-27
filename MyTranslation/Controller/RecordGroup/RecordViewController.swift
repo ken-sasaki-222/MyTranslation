@@ -78,7 +78,7 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // セルとTableViewの背景色
         cell.recordCell.backgroundColor = ColorList.mainColor
-        recordTableView.backgroundColor = ColorList.mainColor
+        recordTableView.backgroundColor = ColorList.backgroundColor
         
         // セルのタップを無効化
         cell.selectionStyle = UITableViewCell.SelectionStyle.none

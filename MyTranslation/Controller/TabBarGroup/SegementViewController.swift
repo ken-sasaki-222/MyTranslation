@@ -32,10 +32,10 @@ class SegementViewController: SegementSlideDefaultViewController {
         
         // NavigationBarのタイトルとその色とフォント
         navigationItem.title = "俺の翻訳"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19.0, weight: .semibold)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorList.mainColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19.0, weight: .semibold)]
         
         // NavigationBarの色
-        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "1e90ff")
+        self.navigationController?.navigationBar.barTintColor = ColorList.accentColor
         
         // 一部NavigationBarがすりガラス？のような感じになるのでfalseで統一
         self.navigationController?.navigationBar.isTranslucent = false

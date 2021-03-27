@@ -50,7 +50,7 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate,
         versionLabel.text = menuTextArray[Count.three]
         
         // パーツの配色設定（ベースカラー）
-        view.backgroundColor       = UIColor(hex: "f4f8fa")
+        view.backgroundColor       = ColorList.backgroundColor
         reviewBox.backgroundColor  = ColorList.mainColor
         mailBox.backgroundColor    = ColorList.mainColor
         twitterBox.backgroundColor = ColorList.mainColor
