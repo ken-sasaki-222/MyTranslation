@@ -45,6 +45,8 @@ pod 'EMAlertController'
 
 pod 'Firebase/MLNaturalLanguage', '6.25.0'
 pod 'Firebase/MLNLLanguageID', '6.25.0'
+
+pod 'SegementSlide', '3.0.1'
 ```
 
 ```
@@ -60,6 +62,9 @@ import AVFoundation
 # アカウントページで使用
 import StoreKit
 import MessageUI
+
+# ページ管理で使用
+import SegementSlide
 
 # その他
 import UIKit
@@ -91,28 +96,11 @@ XCTestは使わずMagic Podを用いてUIテスト行いました。
 これらの機能を今後の課題とします。
 
 ## 機能紹介
-### 翻訳機能の紹介
-![ホーム画面動画](https://user-images.githubusercontent.com/61372276/111493476-edcb0100-8780-11eb-8735-69cdd6ff3182.gif)
+### 翻訳機能 & 履歴ページの紹介
+![翻訳機能、履歴ページ紹介](https://user-images.githubusercontent.com/61372276/112713843-88aea280-8f1a-11eb-8eb5-c2e774aba5b9.gif)
 
-### 翻訳内容読み上げ機能(ホーム)の紹介
-![読み上げ動画1](https://user-images.githubusercontent.com/61372276/111493781-3a164100-8781-11eb-90a5-770f13eb345e.gif)
-
-※正常に読み上げています
-
-### 翻訳内容読み上げ機能(履歴)の紹介
-![読み上げ動画2](https://user-images.githubusercontent.com/61372276/111493924-5d40f080-8781-11eb-9af4-3c360094367c.gif)
-
-※正常に読み上げています
-
-### レビュー機能の紹介
-![レビュー](https://user-images.githubusercontent.com/61372276/111494049-7ba6ec00-8781-11eb-801d-f50bfa50db43.gif)
-
-### お問い合わせ機能の紹介
-
-
-### Twitter紹介機能の紹介
-![twitter紹介](https://user-images.githubusercontent.com/61372276/111494140-92e5d980-8781-11eb-8bd1-85f56343c3cc.gif)
-
+### メニューページの紹介
+![メニュー紹介](https://user-images.githubusercontent.com/61372276/112713818-703e8800-8f1a-11eb-9634-da6d26cc3dac.gif)
 
 ## 開発者の連絡先
 このアプリに関するご連絡はアカウントをフォローしていただき[Twitter](https://twitter.com/ken_sasaki2)のダイレクトメッセージにて連絡。  
